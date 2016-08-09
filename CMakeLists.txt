@@ -23,22 +23,34 @@ set(LIB_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/exceptions.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Feed.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/util.cpp
-
 )
+
+add_library(rss_lib ${LIB_SOURCES})
 
 add_executable(test_runner
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_pugi_util.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_FeedParser.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_rss_parsing.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_atom_parsing.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_time_util.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/testing/parsers/test_pugi_util.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/testing/parsers/test_FeedParser.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/testing/parsers/test_rss_parsing.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/testing/parsers/test_atom_parsing.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/testing/parsers/test_time_util.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/testing/run_tests.cpp
-    ${LIB_SOURCES}
 )
+
+add_dependencies(test_runner rss_lib)
 
 target_link_libraries(test_runner
     gmock
     pthread
     atomic
+    rss_lib
 )
 
+add_executable(memtest_runner
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/testing/run_memtest.cpp
+)
+add_dependencies(memtest_runner rss_lib)
+target_link_libraries(memtest_runner
+    pthread
+    atomic
+    rss_lib
+)

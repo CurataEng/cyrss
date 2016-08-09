@@ -1,7 +1,7 @@
 #pragma once
 #include <sstream>
 #include <string>
-
+#include <iostream>
 namespace curata { namespace rss { namespace util {
 
 template<typename T>
@@ -29,5 +29,16 @@ std::string joinWith(const std::string &joiner, const TCollection &items) {
 }
 
 std::string loadFile(const std::string &fpath);
+
+template<typename T1>
+void logInfo(const T1 &t1) {
+  std::cout << "[info]\t" << t1 << std::endl;
+}
+
+template<typename T1, typename T2>
+void logInfo(const T1 &t1, const T2 &t2) {
+  std::cout << "[info]\t" << t1 << " " << t2 << std::endl;
+}
+
 
 }}} // curata::rss::util

@@ -4,6 +4,19 @@
 The underlying library is in c++, with the bindings written in Cython.
 It handles byte or unicode strings in both Python 2 and Python 3.
 
+## simple example
+```python
+from cyrss import parse_feed
+import requests
+
+feed_data = requests.get('http://www.example.com/rss').content
+feed = parse_feed(feed_data)
+for entry in feed.items:
+    pass
+
+```
+See the detailed API further down in the readme.
+
 
 ## performance
 In an [unscientific benchmark](./bench.py), `cyrss` hovers around 100x the speed of the popular `feedparser` library.
@@ -82,9 +95,12 @@ Like `parse_bytes`, but assumes that the input is utf8-encoded and does not atte
 ## Testing
 
 ### tl;dr
+
 ```bash
 make test
 ```
+
+
 
 ### General strategy
 There are both Python and C++ tests.  Of the two groups, the Python tests are more focused on overall correctness of feed extraction.  The C++ tests are more focused on the lower-level parsing details, especially memory safety and handling of invalid inputs.
@@ -98,12 +114,29 @@ When developing, use the `make test_py` command to run these.  `make test_py` se
 ### C++
 The C++ tests use `gtest` and `cmake`, and live under `src/testing`.  To run just the C++ tests, use the make target `test_cpp`.
 
-A version of `gtest` is included in this repo as a submodule, and cmake is configured to look for and use it.  If you run into problems related to `googletest` not being found, make sure you've pulled the submodule by running:
+A version of `gtest` is included in this repo as a submodule, and cmake is configured to look for and use it.  The submodule will be automatically pulled if it's missing.
 
 ```bash
 git submodule init
 git submodule update
 ```
+
+### Valgrind
+There's a separate memory leak check in the C++ testing directory, which parses sample RSS and Atom feeds under Valgrind and reports on any leaks.  This is already run as part of `make test`.  To run it separately, do:
+
+```bash
+make memcheck
+```
+
+Valgrind often shows some false positives from internal libstdc++ functions.  As long as you see this at the end, we aren't leaking any memory:
+```bash
+==23459== LEAK SUMMARY:
+==23459==    definitely lost: 0 bytes in 0 blocks
+==23459==    indirectly lost: 0 bytes in 0 blocks
+==23459==      possibly lost: 0 bytes in 0 blocks
+```
+
+Valgrind will often show some number of bytes as `still reachable`.  This is fine.
 
 
 ### TODO

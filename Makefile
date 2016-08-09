@@ -15,7 +15,10 @@ test_cpp: build_cpp_tests
 test_py:
 	CYRSS_TESTING_USE_PYXIMPORT=1 py.test cyrss_tests/*.py
 
-test: test_cpp test_py
+memcheck: build_cpp_tests
+	valgrind --tool=memcheck ./build/cpp/memtest_runner
+
+test: test_cpp test_py memcheck
 
 release: clean
 	cython --cplus cyrss/feed_parser/*.pyx
