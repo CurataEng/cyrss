@@ -25,27 +25,30 @@ EXTRA_SRC = (
     'exceptions.cpp'
 )
 
-CY_SRC = (
-    'cyrss/feed_parser/feed_parser.cpp',
-    'cyrss/feed_parser/compat.cpp',
-    'cyrss/feed_parser/benchmarker.cpp'
-)
-
-def get_extension():
+def get_extensions():
     extra_src = map(lambda f: os.path.join('src', f), EXTRA_SRC)
     extra_src = list(map(root_rel, extra_src))
-    all_src = list(CY_SRC) + extra_src
-    return Extension('cyrss.feed_parser.feed_parser',
-        sources=all_src,
-        language='c++',
-        include_dirs=[root_rel('include')],
-        extra_compile_args=['--std=c++11', OPTIMIZATION]
-    )
+    return [
+        Extension('cyrss.feed_parser.feed_parser',
+            sources=['cyrss/feed_parser/feed_parser.cpp'] + extra_src,
+            language='c++',
+            include_dirs=[root_rel('include')],
+            extra_compile_args=['--std=c++11', OPTIMIZATION]
+        ),
+        Extension('cyrss.feed_parser.benchmarker',
+            sources=['cyrss/feed_parser/benchmarker.cpp'],
+            language='c++'
+        ),
+        Extension('cyrss.feed_parser.compat',
+            sources=['cyrss/feed_parser/compat.cpp'],
+            langue='c++'
+        )
+    ]
 
 
 setup(
     name='cyrss',
-    version='0.9.1',
+    version='0.9.2',
     description="A fast RSS parser",
     license='MIT',
     package_data={
@@ -56,6 +59,6 @@ setup(
         'cyrss', 'cyrss.feed_parser'
     ],
     install_requires=['cchardet>=1.0.0'],
-    ext_modules=[get_extension()],
+    ext_modules=get_extensions(),
     provides=['cyrss']
 )
