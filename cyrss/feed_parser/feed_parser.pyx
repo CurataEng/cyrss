@@ -1,4 +1,20 @@
-from rss_defs cimport FeedParser, Feed, FeedItem
+from rss_defs cimport (
+    FeedParser,
+    Feed,
+    FeedItem,
+    FeedAuthor,
+    FeedMetadata,
+    FeedData,
+    FeedDateTime,
+    FeedLink,
+    FeedEditor,
+    FeedEncoding,
+    FeedEnclosure,
+    FeedLanguage,
+    FeedGuid,
+    FeedEntryGuid
+)
+
 from libcpp.vector cimport vector
 import cchardet
 import sys
@@ -24,107 +40,99 @@ class CyRssException(RuntimeError):
 class CyRssTypeError(CyRssException, TypeError):
     pass
 
-
 cdef class CyFeedItem:
-    cdef unicode title_
-    cdef unicode title_type_
-    cdef unicode description_
-    cdef unicode description_type_
-    cdef unicode link_
-    cdef unicode author_
-    cdef unicode author_email_
-    cdef unicode pubDate_
-    cdef unicode guid_
-    cdef unicode enclosure_url_
-    cdef unicode enclosure_type_
-    cdef unicode content_encoded_
-    cdef unicode itunes_summary_
-    cdef unicode base_
+    cdef FeedItem feed_item_
 
-    def __init__(self, FeedItem cpp_feed_item):
-        self.title_ = cpp_feed_item.title.decode('utf-8')
-        self.title_type_ = cpp_feed_item.title_type.decode('utf-8')
-        self.description_ = cpp_feed_item.description.decode('utf-8')
-        self.description_type_ = cpp_feed_item.description_type.decode('utf-8')
-        self.link_ = cpp_feed_item.link.decode('utf-8')
-        self.author_ = cpp_feed_item.author.decode('utf-8')
-        self.author_email_ = cpp_feed_item.author_email.decode('utf-8')
-        self.pubDate_ = cpp_feed_item.pubDate.decode('utf-8')
-        self.guid_ = cpp_feed_item.guid.decode('utf-8')
-        self.enclosure_url_ = cpp_feed_item.enclosure_url.decode('utf-8')
-        self.enclosure_type_ = cpp_feed_item.enclosure_type.decode('utf-8')
-        self.content_encoded_ = cpp_feed_item.content_encoded.decode('utf-8')
-        self.itunes_summary_ = cpp_feed_item.itunes_summary.decode('utf-8')
-        self.base_ = cpp_feed_item.base.decode('utf-8')
+    def __cinit__(self, FeedItem cpp_feed_item):
+        self.feed_item_ = cpp_feed_item
 
     property title:
         def __get__(self):
-            return self.title_
+            return self.feed_item_.title.data
 
     property title_type:
         def __get__(self):
-            return self.title_type_
+            return "text"
 
     property description:
         def __get__(self):
-            return self.description_
+            return self.feed_item_.description.data
 
     property description_type:
         def __get__(self):
-            return self.description_type_
+            return "text"
 
     property link:
         def __get__(self):
-            return self.link_
+            return self.feed_item_.link.url
 
     property author:
         def __get__(self):
-            return self.author_
+            return self.feed_item_.author.name
 
     property author_email:
         def __get__(self):
-            return self.author_email_
+            return self.feed_item_.author.email
 
     property pubDate:
         def __get__(self):
-            return self.pubDate_
+            return self.feed_item_.pubDate
 
     property pub_date:
         def __get__(self):
-            return self.pubDate_
+            return self.feed_item_.pubDate
 
     property guid:
         def __get__(self):
-            return self.guid_
+            return self.feed_item_.guid.guid.id
 
     property enclosure_url:
         def __get__(self):
-            return self.enclosure_url_
+            return self.enclosure.link.url
 
     property enclosure_type:
         def __get__(self):
-            return self.enclosure_type_
+            return "text"
+
+
+cdef class CyFeedMetadata:
+    cdef FeedMetadata metadata_
+
+    def __cinit__(self, FeedMetadata cpp_metadata):
+        self.metadata_ = cpp_metadata
+
+    property title:
+        def __get__(self):
+            return self.metadata_.title.data
+
+    property description:
+        def __get__(self):
+            return self.metadata_.description.data
+
+    property link:
+        def __get__(self):
+            return self.metadata_.link.url
+
+    property managing_editor:
+        def __get__(self):
+            return self.metadata_.managingEditor.name
+
+    property author:
+        def __get__(self):
+            return self.metadata_.author.name
+
+    property author_email:
+        def __get__(self):
+            return self.metadata_.author.email
+
 
 cdef class CyFeed:
-    cdef unicode title_
-    cdef unicode description_
-    cdef unicode link_
-    cdef unicode language_
-    cdef unicode managing_editor_
-    cdef unicode dc_creator_
-    cdef unicode pub_date_
+    cdef CyFeedMetadata metadata_
     cdef object items_
 
-    def __init__(self, Feed cpp_feed):
-        self.title_ = cpp_feed.title.decode('utf-8')
-        self.description_ = cpp_feed.description.decode('utf-8')
-        self.link_ = cpp_feed.link.decode('utf-8')
-        self.language_ = cpp_feed.language.decode('utf-8')
-        self.managing_editor_ = cpp_feed.managingEditor.decode('utf-8')
-        self.dc_creator_ = cpp_feed.dc_creator.decode('utf-8')
-        self.pub_date_ = cpp_feed.pubDate.decode('utf-8')
-
-        self.items_ = []
+    def __cinit__(self, Feed cpp_feed):
+        self.metadata_ = CyFeedMetadata(cpp_feed.metadata)
+        self.items = []
         cdef CyFeedItem current_item
         for item in cpp_feed.items:
             current_item = CyFeedItem(item)
@@ -132,35 +140,35 @@ cdef class CyFeed:
 
     property title:
         def __get__(self):
-            return self.title_
+            return self.metadata_.title
 
     property description:
         def __get__(self):
-            return self.description_
+            return self.metadata_.description
 
     property link:
         def __get__(self):
-            return self.link_
+            return self.metadata_.link
 
     property language:
         def __get__(self):
-            return self.language_
+            return self.metadata_.language
 
     property pub_date:
         def __get__(self):
-            return self.pub_date_
+            return self.metadata_.pub_date
 
     property pubDate:
         def __get__(self):
-            return self.pub_date_
+            return self.metadata_.pub_date
 
     property managing_editor:
         def __get__(self):
-            return self.managing_editor_
+            return self.metadata_.managing_editor
 
     property managingEditor:
         def __get__(self):
-            return self.managing_editor_
+            return self.metadata_.managing_editor
 
     property items:
         def __get__(self):

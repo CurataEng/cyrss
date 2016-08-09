@@ -32,21 +32,21 @@ Feed FeedParser::parseFeed(const string &docString) {
 
 Feed FeedParser::parseFeed(const pugi::xml_document &doc) {
   Feed result;
-  result.rss_version = FeedType::UNKNOWN;
+  result.metadata.format = FeedFormat::UNKNOWN;
   auto root = doc.root();
   auto baseElem = root.child("rss");
   if (baseElem) {
     auto versionStr = pugi_util::getNodeAttr(baseElem, "version");
-    auto rssType = getRssType(versionStr);
-    if (rssType == FeedType::UNKNOWN) {
+    auto format = getRssType(versionStr);
+    if (format == FeedFormat::UNKNOWN) {
       throw ParseError("unknown RSS version.");
     }
-    result.rss_version = rssType;
+    result.metadata.format = format;
   }
   if (!baseElem) {
     baseElem = root.child("RDF");
     if (baseElem) {
-      result.rss_version = FeedType::RSS_1_0;
+      result.metadata.format = FeedFormat::RSS_1_0;
     }
   }
   if (!baseElem) {
@@ -54,45 +54,44 @@ Feed FeedParser::parseFeed(const pugi::xml_document &doc) {
     if (baseElem) {
       auto feedNamespace = pugi_util::getNodeAttr(baseElem, "xmlns");
       if (feedNamespace == "http://www.w3.org/2005/Atom") {
-        result.rss_version = FeedType::ATOM_1_0;
+        result.metadata.format = FeedFormat::ATOM_1_0;
       } else if (feedNamespace == "http://purl.org/atom/ns#") {
-        result.rss_version = FeedType::ATOM_0_3;
+        result.metadata.format = FeedFormat::ATOM_0_3;
       } else {
         auto versionStr = pugi_util::getNodeAttr(baseElem, "version");
         if (versionStr == "0.3") {
-          result.rss_version = FeedType::ATOM_0_3_NONS;
+          result.metadata.format = FeedFormat::ATOM_0_3_NONS;
         }
       }
-
-      if (result.rss_version == FeedType::UNKNOWN) {
+      if (result.metadata.format == FeedFormat::UNKNOWN) {
         throw ParseError("Seems to be an atom feed, but couldn't determine version.");
       }
     }
   }
   if (!baseElem) {
-    throw ParseError("Unknown feed type");
+    throw ParseError("Unknown feed format");
   }
-  switch(result.rss_version) {
-    case FeedType::RSS_1_0:
+  switch(result.metadata.format) {
+    case FeedFormat::RSS_1_0:
       parseRss10Feed(result, baseElem);
       break;
-    case FeedType::RSS_0_91:
-    case FeedType::RSS_0_92:
-    case FeedType::RSS_0_94:
+    case FeedFormat::RSS_0_91:
+    case FeedFormat::RSS_0_92:
+    case FeedFormat::RSS_0_94:
       parseRss09xFeed(result, baseElem);
       break;
-    case FeedType::RSS_2_0:
+    case FeedFormat::RSS_2_0:
       parseRss20Feed(result, baseElem);
       break;
-    case FeedType::ATOM_0_3:
-    case FeedType::ATOM_1_0:
-    case FeedType::ATOM_0_3_NONS:
+    case FeedFormat::ATOM_0_3:
+    case FeedFormat::ATOM_1_0:
+    case FeedFormat::ATOM_0_3_NONS:
       parseAtomFeed(result, baseElem);
       break;
 
-    case FeedType::UNKNOWN:
+    case FeedFormat::UNKNOWN:
     default:
-      throw ParseError("unknown feed type");
+      throw ParseError("unknown feed format");
       break;
   }
   return result;

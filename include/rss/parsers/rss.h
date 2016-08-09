@@ -14,7 +14,7 @@
 
 namespace curata { namespace rss { namespace parsers {
 
-FeedType getRssType(const std::string& versionStr);
+FeedFormat getRssType(const std::string& versionStr);
 void parseRss09xFeed(Feed& f, const pugi::xml_node&);
 FeedItem parseRss09xFeedItem(const pugi::xml_node&);
 

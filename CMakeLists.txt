@@ -21,6 +21,7 @@ set(LIB_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/time_util.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/url_util.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/exceptions.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Feed.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/util.cpp
 
 )

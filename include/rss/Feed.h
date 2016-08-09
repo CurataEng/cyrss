@@ -8,10 +8,11 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "rss/xml/pugixml.hpp"
 
 namespace curata { namespace rss {
 
-enum class FeedType {
+enum class FeedFormat {
   UNKNOWN = 0,
   RSS_0_91,
   RSS_0_92,
@@ -23,25 +24,79 @@ enum class FeedType {
   ATOM_0_3_NONS
 };
 
-struct FeedItem {
-  std::string title;
-  std::string title_type;
-  std::string link;
-  std::string description;
-  std::string description_type;
-  std::string author;
-  std::string author_email;
+enum class FeedDataType {
+  UNKNOWN = 0,
+  TEXT = 1,
+  HTML = 2
+};
 
-  std::string pubDate;
-  std::string guid;
-  bool guid_isPermaLink;
+FeedDataType feedDataTypeOfString(const std::string&);
 
-  std::string enclosure_url;
-  std::string enclosure_type;
+struct FeedData {
+  FeedDataType dtype {FeedDataType::UNKNOWN};
+  std::string data;
+  static FeedData fromXmlNode(const pugi::xml_node&);
+};
+
+struct FeedLink {
+  std::string url;
+  std::string dtype;
+};
+
+struct FeedAuthor {
+  std::string name;
+  std::string email;
+  FeedLink link;
+};
+
+struct FeedDateTime {
+  std::string timestamp;
+  bool empty() const;
+  static FeedDateTime fromW3cDtf(const std::string&);
+  static FeedDateTime fromW3cDtf(const pugi::xml_node&);
+  static FeedDateTime fromRfc822(const std::string&);
+  static FeedDateTime fromRfc822(const pugi::xml_node&);
+
+};
+
+struct FeedGuid {
+  std::string id;
+};
+
+struct FeedEntryGuid {
+  FeedGuid guid;
+  bool isPermaLink {false};
+};
+
+struct FeedEnclosure {
+  FeedLink link;
+  std::string dtype;
+};
+
+struct FeedEncoding {
+  std::string dtype;
+};
+
+
+struct FeedLanguage {
+  std::string name;
+};
+
+
+class FeedItem {
+ public:
+  FeedEntryGuid guid;
+  FeedData title;
+  FeedData description;
+  FeedData summary;
+  FeedData itunesSummary;
+  FeedLink link;
+  FeedAuthor author;
+  FeedDateTime pubDate;
+  FeedEnclosure enclosure;
 
   // extensions:
-  std::string content_encoded;
-  std::string itunes_summary;
+  FeedEncoding encoded;
 
   // Atom-specific:
   std::string base;
@@ -49,19 +104,26 @@ struct FeedItem {
   std::vector<std::string> categories;
 };
 
-struct Feed {
-  std::string encoding;
+struct FeedEditor {
+  std::string name;
+};
 
-  FeedType rss_version;
-  std::string title;
-  std::string title_type;
-  std::string description;
-  std::string link;
-  std::string language;
-  std::string managingEditor;
-  std::string dc_creator;
-  std::string pubDate;
+class FeedMetadata {
+ public:
+  FeedData title;
+  FeedData description;
+  FeedFormat format;
+  FeedLink link;
+  FeedLanguage language;
+  FeedEncoding encoded;
+  FeedAuthor author;
+  FeedEditor managingEditor;
+  FeedDateTime pubDate;
+};
 
+class Feed {
+ public:
+  FeedMetadata metadata;
   std::vector<FeedItem> items;
 };
 

@@ -6,7 +6,8 @@ build_cpp_tests: test_deps
 
 clean:
 	rm -rf build dist
-	rm -f cyrss/feed_parser/*.cpp
+	rm -f cyrss/feed_parser/*.cpp cyrss/feed_parser/*.pycbldc
+	rm -rf cyrss/.cache cyrss/feed_parser/.cache cyrss/__pycache__ cyrss/feed_parser/__pycache__
 
 test_cpp: build_cpp_tests
 	./build/cpp/test_runner

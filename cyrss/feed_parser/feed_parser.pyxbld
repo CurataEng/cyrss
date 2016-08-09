@@ -14,6 +14,7 @@ def make_ext(modname, pyxfilename):
         'parsers/url_util.cpp',
         'xml/pugixml.cpp',
         'util.cpp',
+        'Feed.cpp',
         'exceptions.cpp'
     ]
     extra_src = list(map(

@@ -8,11 +8,12 @@
 
 
 #include "rss/parsers/rss.h"
+#include "rss/Feed.h"
 #include "rss/parsers/pugi_util.h"
 #include "rss/parsers/time_util.h"
 #include "rss/exceptions.h"
-using namespace std;
 
+using namespace std;
 
 namespace curata { namespace rss { namespace parsers {
 
@@ -20,27 +21,27 @@ using pugi_util::getNodeContent;
 using pugi_util::getNodeAttr;
 
 
-FeedType getRssType(const std::string& versionStr) {
+FeedFormat getRssType(const std::string& versionStr) {
   if (versionStr.empty()) {
-    return FeedType::UNKNOWN;
+    return FeedFormat::UNKNOWN;
   }
   if (versionStr[0] == '0') {
     if (versionStr.size() < 4) {
-      return FeedType::UNKNOWN;
+      return FeedFormat::UNKNOWN;
     }
     if (versionStr == "0.91") {
-      return FeedType::RSS_0_91;
+      return FeedFormat::RSS_0_91;
     } else if (versionStr == "0.92") {
-      return FeedType::RSS_0_92;
+      return FeedFormat::RSS_0_92;
     } else if (versionStr == "0.94") {
-      return FeedType::RSS_0_94;
+      return FeedFormat::RSS_0_94;
     }
   } else if (versionStr == "2.0" || versionStr == "2") {
-    return FeedType::RSS_2_0;
+    return FeedFormat::RSS_2_0;
   } else if (versionStr == "1.0") {
-    return FeedType::RSS_1_0;
+    return FeedFormat::RSS_1_0;
   }
-  return FeedType::UNKNOWN;
+  return FeedFormat::UNKNOWN;
 }
 
 void parseRss09xFeed(Feed& feed, const pugi::xml_node &rootNode) {
@@ -52,18 +53,17 @@ void parseRss09xFeed(Feed& feed, const pugi::xml_node &rootNode) {
   for (auto node: channel.children()) {
     name = node.name();
     if (name == "title") {
-      feed.title = getNodeContent(node);
-      feed.title_type = "text";
+      feed.metadata.title = FeedData::fromXmlNode(node);
     } else if (name == "link") {
-      feed.link = getNodeContent(node);
+      feed.metadata.link.url = getNodeContent(node);
     } else if (name == "language") {
-      feed.language = getNodeContent(node);
+      feed.metadata.language.name = getNodeContent(node);
     } else if (name == "description") {
-      feed.description = getNodeContent(node);
+      feed.metadata.description = FeedData::fromXmlNode(node);
     } else if (name == "managingEditor") {
-      feed.managingEditor = getNodeContent(node);
+      feed.metadata.managingEditor.name = getNodeContent(node);
     } else if (name == "pubDate") {
-      feed.pubDate = getNodeContent(node);
+      feed.metadata.pubDate = FeedDateTime::fromRfc822(node);
     } else if (name == "item") {
       feed.items.push_back(parseRss09xFeedItem(node));
     }
@@ -72,52 +72,45 @@ void parseRss09xFeed(Feed& feed, const pugi::xml_node &rootNode) {
 
 FeedItem parseRss09xFeedItem(const pugi::xml_node &itemNode) {
   FeedItem feedItem;
-  std::string author;
-  std::string dc_date;
   string name;
   for (auto child: itemNode.children()) {
     name = child.name();
     if (name == "title") {
-      getNodeContent(feedItem.title, child);
+      feedItem.title = FeedData::fromXmlNode(child);
     } else if (name == "link") {
-      getNodeContent(feedItem.link, child);
+      getNodeContent(feedItem.link.url, child);
     } else if (name == "description") {
-      getNodeContent(feedItem.description, child);
+      feedItem.description = FeedData::fromXmlNode(child);
     } else if (name == "encoded") {
-      getNodeContent(feedItem.content_encoded, child);
+      getNodeContent(feedItem.encoded.dtype, child);
     } else if (name == "summary") {
-      getNodeContent(feedItem.itunes_summary, child);
+      feedItem.summary = FeedData::fromXmlNode(child);
     } else if (name == "guid") {
-      getNodeContent(feedItem.guid, child);
-      feedItem.guid_isPermaLink = true;
+      getNodeContent(feedItem.guid.guid.id, child);
+      feedItem.guid.isPermaLink = true;
       if (pugi_util::getNodeAttr(child, "isPermaLink") == "false") {
-        feedItem.guid_isPermaLink = false;
+        feedItem.guid.isPermaLink = false;
       }
     } else if (name == "pubDate") {
-      getNodeContent(feedItem.pubDate, child);
-    } else if (name == "date") {
-      dc_date = time_util::w3cdtf_to_rfc822(getNodeContent(child));
+      feedItem.pubDate = FeedDateTime::fromRfc822(child);
+    } else if (name == "date" && feedItem.pubDate.empty()) {
+      feedItem.pubDate = FeedDateTime::fromW3cDtf(child);
     } else if (name == "author") {
-      getNodeContent(feedItem.author, child);
-      getNodeContent(feedItem.author, child);
-    } else if (name == "creator") {
-      author = getNodeContent(child);
+      getNodeContent(feedItem.author.name, child);
+    } else if (name == "dc:author" && !feedItem.author.name.size()) {
+      getNodeContent(feedItem.author.name, child);
+    } else if (name == "creator" && !feedItem.author.name.size()) {
+      getNodeContent(feedItem.author.name, child);
     } else if (name == "enclosure") {
-      pugi_util::getNodeAttr(feedItem.enclosure_url, child, "url");
-      pugi_util::getNodeAttr(feedItem.enclosure_type, child, "type");
+      pugi_util::getNodeAttr(feedItem.enclosure.link.url, child, "url");
+      pugi_util::getNodeAttr(feedItem.enclosure.dtype, child, "type");
     } else if (name == "group") {
       auto contentChild = child.child("content");
       if (contentChild) {
-        pugi_util::getNodeAttr(feedItem.enclosure_url, contentChild, "url");
-        pugi_util::getNodeAttr(feedItem.enclosure_type, contentChild, "type");
+        pugi_util::getNodeAttr(feedItem.enclosure.link.url, contentChild, "url");
+        pugi_util::getNodeAttr(feedItem.enclosure.dtype, contentChild, "type");
       }
     }
-  }
-  if (feedItem.author == "") {
-    feedItem.author = author;
-  }
-  if (feedItem.pubDate == "") {
-    feedItem.pubDate = dc_date;
   }
   return feedItem;
 }
@@ -133,16 +126,15 @@ void parseRss10Feed(Feed& feed, const pugi::xml_node &rootNode) {
   for (auto node: channel.children()) {
     name = node.name();
     if (name == "title") {
-      feed.title = getNodeContent(node);
-      feed.title_type = "text";
+      feed.metadata.title = FeedData::fromXmlNode(node);
     } else if (name == "link") {
-      feed.link = getNodeContent(node);
+      feed.metadata.link.url = getNodeContent(node);
     } else if (name == "description") {
-      feed.description = getNodeContent(node);
+      feed.metadata.description = FeedData::fromXmlNode(node);
     } else if (name == "date") {
-      feed.pubDate = time_util::w3cdtf_to_rfc822(getNodeContent(node));
+      feed.metadata.pubDate = FeedDateTime::fromW3cDtf(node);
     } else if (name == "creator") {
-      feed.dc_creator = getNodeContent(node);
+      getNodeContent(feed.metadata.author.name, node);
     } else if (name == "item") {
       feed.items.push_back(parseRss10FeedItem(node));
     }
@@ -151,25 +143,24 @@ void parseRss10Feed(Feed& feed, const pugi::xml_node &rootNode) {
 
 FeedItem parseRss10FeedItem(const pugi::xml_node &itemNode) {
   FeedItem feedItem;
-  getNodeAttr(feedItem.guid, itemNode, "about");
+  getNodeAttr(feedItem.guid.guid.id, itemNode, "about");
   string name;
   for (auto child: itemNode.children()) {
     name = child.name();
     if (name == "title") {
-      getNodeContent(feedItem.title, child);
+      feedItem.title = FeedData::fromXmlNode(child);
     } else if (name == "link") {
-      getNodeContent(feedItem.link, child);
+      getNodeContent(feedItem.link.url, child);
     } else if (name == "description") {
-      getNodeContent(feedItem.description, child);
+      feedItem.description = FeedData::fromXmlNode(child);
     } else if (name == "date") {
-      auto dcDate = getNodeContent(child);
-      feedItem.pubDate = time_util::w3cdtf_to_rfc822(dcDate);
+      feedItem.pubDate = FeedDateTime::fromW3cDtf(child);
     } else if (name == "encoded") {
-      getNodeContent(feedItem.content_encoded, child);
+      getNodeContent(feedItem.encoded.dtype, child);
     } else if (name == "summary") {
-      getNodeContent(feedItem.itunes_summary, child);
+      feedItem.summary = FeedData::fromXmlNode(child);
     } else if (name == "creator") {
-      getNodeContent(feedItem.author, child);
+      getNodeContent(feedItem.author.name, child);
     }
   }
   return feedItem;

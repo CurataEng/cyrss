@@ -32,21 +32,21 @@ TEST(TestFeedParser, BasicRssTest) {
   FeedParser fp;
   auto doc = getJezebelDocument();
   auto parsed = fp.parseFeed(doc);
-  EXPECT_TRUE(parsed.title.find("Jezebel") != string::npos);
-  EXPECT_TRUE(parsed.description.find("Celebrity, Sex, Fashion") != string::npos);
+  EXPECT_TRUE(parsed.metadata.title.data.find("Jezebel") != string::npos);
+  EXPECT_TRUE(parsed.metadata.description.data.find("Celebrity, Sex, Fashion") != string::npos);
   map<string, FeedItem*> itemsByTitle;
   for (auto &item: parsed.items) {
-    itemsByTitle.insert(std::make_pair(item.title, &item));
+    itemsByTitle.insert(std::make_pair(item.title.data, &item));
   }
   EXPECT_TRUE(itemsByTitle.size() > 10);
   string bestTitle = "Last Night's Real Housewives of New York Was a Carnival Cruise of Bad Romances";
   auto itemPtr = itemsByTitle[bestTitle];
-  EXPECT_TRUE(itemPtr->title.find("Last") == 0);
+  EXPECT_TRUE(itemPtr->title.data.find("Last") == 0);
 }
 
 TEST(TestFeedParser, BasicAtomTest) {
   FeedParser fp;
   auto doc = getRegisterDocument();
   auto parsed = fp.parseFeed(doc);
-  EXPECT_EQ("The Register", parsed.title);
+  EXPECT_EQ("The Register", parsed.metadata.title.data);
 }
