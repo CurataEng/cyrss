@@ -22,9 +22,9 @@ class TestRss20Channel(unittest.TestCase):
         doc = """
             <rss version="2.0">
             <channel>
-                <managingEditor>an editor</managingEditor>
-                <title>A Title</title>
-                <link>http://example.com</link>
+              <managingEditor>an editor</managingEditor>
+              <title>A Title</title>
+              <link>http://example.com</link>
             </channel>
             </rss>
         """
@@ -38,6 +38,7 @@ class TestRss20Channel(unittest.TestCase):
         doc = """"
             <rss version="2.0">
             <channel>
+              <title>Something</title>
             </channel>
             </rss>
         """
@@ -177,6 +178,7 @@ class TestRss20Entry(unittest.TestCase):
             </rss>
         """
         feed = parse_feed(doc)
+        self.assertEqual("a summary", feed.items[0].summary)
         self.assertEqual("a description", feed.items[0].description)
 
     def test_parse_entry_description_summary_2(self):
@@ -190,7 +192,7 @@ class TestRss20Entry(unittest.TestCase):
             </rss>
         """
         feed = parse_feed(doc)
-        self.assertEqual("a summary", feed.items[0].description)
+        self.assertEqual("a summary", feed.items[0].summary)
 
     def test_parse_entry_enclosure_url(self):
         doc = """

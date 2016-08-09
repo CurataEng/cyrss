@@ -35,6 +35,7 @@ FeedDataType feedDataTypeOfString(const std::string&);
 struct FeedData {
   FeedDataType dtype {FeedDataType::UNKNOWN};
   std::string data;
+  bool empty() const;
   static FeedData fromXmlNode(const pugi::xml_node&);
 };
 

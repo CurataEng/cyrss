@@ -43,100 +43,116 @@ class CyRssTypeError(CyRssException, TypeError):
 cdef class CyFeedItem:
     cdef FeedItem feed_item_
 
-    def __cinit__(self, FeedItem cpp_feed_item):
-        self.feed_item_ = cpp_feed_item
-
     property title:
         def __get__(self):
-            return self.feed_item_.title.data
+            return self.feed_item_.title.data.decode('utf-8')
 
     property title_type:
         def __get__(self):
-            return "text"
+            return self.feed_item_.title.dtype.decode('utf-8')
 
     property description:
         def __get__(self):
-            return self.feed_item_.description.data
+            return self.feed_item_.description.data.decode('utf-8')
 
     property description_type:
         def __get__(self):
-            return "text"
+            return self.feed_item_.description.dtype.decode('utf-8')
+
+    property summary:
+        def __get__(self):
+            return self.feed_item_.summary.data.decode('utf-8')
+
+    property summary_type:
+        def __get__(self):
+            return self.feed_item_.summary.dtype.decode('utf-8')
 
     property link:
         def __get__(self):
-            return self.feed_item_.link.url
+            return self.feed_item_.link.url.decode('utf-8')
 
     property author:
         def __get__(self):
-            return self.feed_item_.author.name
+            return self.feed_item_.author.name.decode('utf-8')
 
     property author_email:
         def __get__(self):
-            return self.feed_item_.author.email
+            return self.feed_item_.author.email.decode('utf-8')
 
     property pubDate:
         def __get__(self):
-            return self.feed_item_.pubDate
+            return self.pub_date
 
     property pub_date:
         def __get__(self):
-            return self.feed_item_.pubDate
+            return self.feed_item_.pubDate.timestamp.decode('utf-8')
 
     property guid:
         def __get__(self):
-            return self.feed_item_.guid.guid.id
+            return self.feed_item_.guid.guid.id.decode('utf-8')
+
+    property id:
+        def __get__(self):
+            return self.guid
 
     property enclosure_url:
         def __get__(self):
-            return self.enclosure.link.url
+            return self.feed_item_.enclosure.link.url.decode('utf-8')
 
     property enclosure_type:
         def __get__(self):
-            return "text"
+            return self.feed_item_.enclosure.dtype.decode('utf-8')
+
+    property content:
+        def __get__(self):
+            if self.description:
+                return self.description
+            return self.summary
 
 
 cdef class CyFeedMetadata:
     cdef FeedMetadata metadata_
 
-    def __cinit__(self, FeedMetadata cpp_metadata):
-        self.metadata_ = cpp_metadata
-
     property title:
         def __get__(self):
-            return self.metadata_.title.data
+            return self.metadata_.title.data.decode('utf-8')
 
     property description:
         def __get__(self):
-            return self.metadata_.description.data
+            return self.metadata_.description.data.decode('utf-8')
 
     property link:
         def __get__(self):
-            return self.metadata_.link.url
+            return self.metadata_.link.url.decode('utf-8')
 
     property managing_editor:
         def __get__(self):
-            return self.metadata_.managingEditor.name
+            return self.metadata_.managingEditor.name.decode('utf-8')
 
     property author:
         def __get__(self):
-            return self.metadata_.author.name
+            return self.metadata_.author.name.decode('utf-8')
 
     property author_email:
         def __get__(self):
-            return self.metadata_.author.email
+            return self.metadata_.author.email.decode('utf-8')
+
+    property pub_date:
+        def __get__(self):
+            return self.metadata_.pubDate.timestamp.decode('utf-8')
+
+    property pubDate:
+        def __get__(self):
+            return self.metadata_.pubDate.timestamp.decode('utf-8')
 
 
 cdef class CyFeed:
     cdef CyFeedMetadata metadata_
     cdef object items_
 
-    def __cinit__(self, Feed cpp_feed):
-        self.metadata_ = CyFeedMetadata(cpp_feed.metadata)
-        self.items = []
-        cdef CyFeedItem current_item
-        for item in cpp_feed.items:
-            current_item = CyFeedItem(item)
-            self.items_.append(current_item)
+    def __init__(self):
+        self.metadata_ = CyFeedMetadata()
+        self.items_ = []
 
     property title:
         def __get__(self):
@@ -153,6 +169,14 @@ cdef class CyFeed:
     property language:
         def __get__(self):
             return self.metadata_.language
+
+    property author:
+        def __get__(self):
+            return self.metadata_.author
+
+    property author_email:
+        def __get__(self):
+            return self.metadata_.author_email
 
     property pub_date:
         def __get__(self):
@@ -180,10 +204,15 @@ cdef class CyFeedParser:
 
     cpdef CyFeed parse_utf8_bytes(self, bytes feed_xml):
         cdef Feed cpp_feed
-        cdef CyFeed feed
+        cdef CyFeed feed = CyFeed()
         try:
             cpp_feed = self.parser_.parseFeed(feed_xml)
-            feed = CyFeed(cpp_feed)
+            feed.metadata_.metadata_ = cpp_feed.metadata
+            for item in cpp_feed.items:
+                current_item = CyFeedItem()
+                current_item.feed_item_ = item
+                feed.items_.append(current_item)
+
             return feed
         except RuntimeError as err:
             raise CyRssException(err)

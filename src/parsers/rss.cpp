@@ -77,6 +77,10 @@ FeedItem parseRss09xFeedItem(const pugi::xml_node &itemNode) {
     name = child.name();
     if (name == "title") {
       feedItem.title = FeedData::fromXmlNode(child);
+    } else if (name == "dc:title" && feedItem.title.empty()) {
+      feedItem.title = FeedData::fromXmlNode(child);
+    } else if (name == "dc:description" && feedItem.description.empty()) {
+      feedItem.description = FeedData::fromXmlNode(child);
     } else if (name == "link") {
       getNodeContent(feedItem.link.url, child);
     } else if (name == "description") {
@@ -85,7 +89,7 @@ FeedItem parseRss09xFeedItem(const pugi::xml_node &itemNode) {
       getNodeContent(feedItem.encoded.dtype, child);
     } else if (name == "summary") {
       feedItem.summary = FeedData::fromXmlNode(child);
-    } else if (name == "guid") {
+    } else if (name == "guid" || name == "id") {
       getNodeContent(feedItem.guid.guid.id, child);
       feedItem.guid.isPermaLink = true;
       if (pugi_util::getNodeAttr(child, "isPermaLink") == "false") {

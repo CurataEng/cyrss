@@ -38,8 +38,7 @@ class TestAtom10Feed(unittest.TestCase):
             </title>
           </feed>
         """
-        feed = parse_feed(doc)
-        self.assertEqual("http://baz.com/x/test.html", feed.)
+
 
 
 class TestAtom10Entry(unittest.TestCase):
@@ -74,12 +73,12 @@ class TestAtom10Entry(unittest.TestCase):
             <feed xmlns="http://www.w3.org/2005/Atom">
               <entry>
                 <title>Something</title>
-                <link rel="alternate" type="text/html" href="http://www.example.com/"/>
+                <link rel="alternate" type="text/html" href="http://www.example.com"/>
               </entry>
             </feed>
         """
         feed = parse_feed(doc)
         entry = feed.items[0]
-        self.assertEqual("http://example.com", entry.link)
+        self.assertEqual("http://www.example.com", entry.link)
         self.assertEqual("Something", entry.title)
 

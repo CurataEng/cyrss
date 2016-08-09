@@ -26,6 +26,10 @@ FeedData FeedData::fromXmlNode(const pugi::xml_node &node) {
   return feedData;
 }
 
+bool FeedData::empty() const {
+  return data.empty();
+}
+
 bool FeedDateTime::empty() const {
   return timestamp.empty();
 }

@@ -75,7 +75,7 @@ class TestAtom03Entry(unittest.TestCase):
             </feed>
         """
         feed = parse_feed(doc)
-        self.assertEqual("abc", feed.items[0].description)
+        self.assertEqual("abc", feed.items[0].summary)
 
     def test_timestamp_created(self):
         doc = """
