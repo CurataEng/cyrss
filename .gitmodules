@@ -1,0 +1,4 @@
+[submodule "external/googletest"]
+	path = external/googletest
+	url = git@github.com:google/googletest
+    commit = ec44c6c1675c25b9827aacd08c02433cccde7780
