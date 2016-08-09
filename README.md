@@ -79,6 +79,33 @@ Encodes a unicode string into a utf8 byte string and then parses it into a `CyFe
 Like `parse_bytes`, but assumes that the input is utf8-encoded and does not attempt character encoding detection.  This is more efficient, but you should only use it if you know what you're doing.
 
 
+## Testing
+
+### tl;dr
+```bash
+make test
+```
+
+### General strategy
+There are both Python and C++ tests.  Of the two groups, the Python tests are more focused on overall correctness of feed extraction.  The C++ tests are more focused on the lower-level parsing details, especially memory safety and handling of invalid inputs.
+
+As a rough rule, an end-to-end test asserting on the properties of each of a sample feed's 20 entries would belong in the Python test suite.  A test checking that we don't segfault on an invalid RSS version would belong with the C++ tests.
+
+### Python
+Python tests are under the root `cyrss_tests` directory.  They live outside of the `cyrss` package due to some oddities in the Cython compilation process.  (It's possible I'm doing something stupid.)
+When developing, use the `make test_py` command to run these.  `make test_py` sets an environment variable which enables Cython's compile-on-import feature (pyximport). Without this, you would need to do a full `setup.py install` prior to running the tests.
+
+### C++
+The C++ tests use `gtest` and `cmake`, and live under `src/testing`.  To run just the C++ tests, use the make target `test_cpp`.
+
+A version of `gtest` is included in this repo as a submodule, and cmake is configured to look for and use it.  If you run into problems related to `googletest` not being found, make sure you've pulled the submodule by running:
+
+```bash
+git submodule init
+git submodule update
+```
+
+
 ### TODO
 
-* document exact mapping of RSS/Atom versions to CyFeedItem
+* document exact mapping and precedence of RSS/Atom attributes to CyFeed / CyFeedItem
