@@ -4,6 +4,11 @@
 The underlying library is in c++, with the bindings written in Cython.
 It handles byte or unicode strings in both Python 2 and Python 3.
 
+## installing
+```bash
+pip install cyrss
+```
+
 ## simple example
 ```python
 from cyrss import parse_feed
