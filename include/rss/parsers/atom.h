@@ -14,6 +14,7 @@
 
 namespace curata { namespace rss { namespace parsers {
 
+void parseAtomAuthor(FeedAuthor&, const pugi::xml_node&);
 void parseAtomFeed(Feed&, const pugi::xml_node&);
 FeedItem parseAtomFeedItem(const pugi::xml_node&, const std::string&);
 

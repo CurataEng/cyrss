@@ -79,6 +79,10 @@ cdef class CyFeedItem:
         def __get__(self):
             return self.feed_item_.author.email.decode('utf-8')
 
+    property author_uri:
+        def __get__(self):
+            return self.feed_item_.author.link.url.decode('utf-8')
+
     property pubDate:
         def __get__(self):
             return self.pub_date
@@ -113,6 +117,14 @@ cdef class CyFeedItem:
 cdef class CyFeedMetadata:
     cdef FeedMetadata metadata_
 
+    property guid:
+        def __get__(self):
+            return self.metadata_.guid.id.decode('utf-8')
+
+    property id:
+        def __get__(self):
+            return self.guid
+
     property title:
         def __get__(self):
             return self.metadata_.title.data.decode('utf-8')
@@ -137,6 +149,10 @@ cdef class CyFeedMetadata:
         def __get__(self):
             return self.metadata_.author.email.decode('utf-8')
 
+    property author_uri:
+        def __get__(self):
+            return self.metadata_.author.link.url.decode('utf-8')
+
     property pub_date:
         def __get__(self):
             return self.metadata_.pubDate.timestamp.decode('utf-8')
@@ -153,6 +169,15 @@ cdef class CyFeed:
     def __init__(self):
         self.metadata_ = CyFeedMetadata()
         self.items_ = []
+
+
+    property guid:
+        def __get__(self):
+            return self.metadata_.guid
+
+    property id:
+        def __get__(self):
+            return self.metadata_.id
 
     property title:
         def __get__(self):
@@ -175,6 +200,10 @@ cdef class CyFeed:
             return self.metadata_.author
 
     property author_email:
+        def __get__(self):
+            return self.metadata_.author_email
+
+    property author_uri:
         def __get__(self):
             return self.metadata_.author_email
 

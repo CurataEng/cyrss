@@ -152,16 +152,3 @@ class TestAtom03Entry(unittest.TestCase):
             "some content",
             feed.items[0].content
         )
-
-    def test_media_thumbnail(self):
-        doc = """
-            <feed version="0.3" xmlns="http://purl.org/atom/ns#">
-              <entry>
-                <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/"
-                  url="http://example.com/thumbnail.jpg" height="72" width="72" />
-                <title>Example Atom</title>
-              </entry>
-            </feed>
-        """
-        feed = parse_feed(doc)
-        self.assertEqual("http://example.com/thumbnail.jpg", feed.items[0].media_thumbnail)

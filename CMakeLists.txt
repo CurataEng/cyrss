@@ -30,6 +30,7 @@ add_executable(test_runner
     ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_pugi_util.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_FeedParser.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_rss_parsing.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_atom_parsing.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/parsers/test/test_time_util.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/src/testing/run_tests.cpp
     ${LIB_SOURCES}

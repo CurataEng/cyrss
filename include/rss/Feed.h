@@ -111,6 +111,7 @@ struct FeedEditor {
 
 class FeedMetadata {
  public:
+  FeedGuid guid;
   FeedData title;
   FeedData description;
   FeedFormat format;

@@ -55,7 +55,7 @@ class TestAtom10Entry(unittest.TestCase):
             </feed>
         """
         feed = parse_feed(doc)
-        self.assertEqual("Example author", feed.author)
+        self.assertEqual("Example author", feed.items[0].author)
 
     def test_id_1(self):
         doc = """

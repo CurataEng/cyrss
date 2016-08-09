@@ -28,23 +28,36 @@ cyrss has three main classes: `CyFeed`, `CyFeedItem` and `CyFeedParser`.
 
 ### CyFeed
 `CyFeed` has the following properties:
+* `guid` or `id` [unicode]
 * `title` [unicode]
 * `description` [unicode]
+* `description_type` [unicode]
 * `link` [unicode]
+* `pub_date` or `pubDate` [unicode]
+* `author` [unicode]
+* `author_email` [unicode]
+* `author_uri` [unicode]
 * `items` [Python list of `CyFeedItem` instances]
+* `managing_editor` or `managingEditor` [unicode]
+* `content_encoded` [unicode]
+
 
 ### CyFeedItem
 `CyFeedItem` has the following properties:
+* `guid` or `id` [unicode]
 * `title` [unicode]
 * `description` [unicode]
+* `description_type` [unicode]
+* `summary` [unicode]
+* `summary_type` [unicode]
 * `link` [unicode]
 * `author` [unicode]
 * `author_email` [unicode]
+* `author_uri` [unicode]
 * `pubDate` or `pub_date` [unicode]
-* `guid` [unicode]
 * `enclosure_url` [unicode]
+* `enclosure_type` [unicode]
 * `content_encoded` [unicode]
-* `itunes_summary` [unicode]
 
 ### CyFeedParser
 `CyFeedParser` has several methods, each for parsing a different input:

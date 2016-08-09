@@ -25,6 +25,33 @@ using pugi_util::getNodeContent;
 using pugi_util::getNodeAttr;
 
 
+void parseAtomAuthor(FeedAuthor& author, const pugi::xml_node &authorNode) {
+  string nodeName = authorNode.name();
+  if (nodeName != "author") {
+    throw ParseError("expected author node.");
+  }
+  bool haveDetailedAuthor = false;
+  for (auto child: authorNode.children()) {
+    haveDetailedAuthor = true;
+    nodeName = child.name();
+    if (nodeName == "name") {
+      getNodeContent(author.name, child);
+    } else if (nodeName == "email") {
+      getNodeContent(author.email, child);
+    } else if (nodeName == "uri") {
+      getNodeContent(author.link.url, child);
+    } else if (nodeName == "link") {
+      if (author.link.url.empty()) {
+        getNodeContent(author.link.url, child);
+      }
+    }
+  }
+  if (!haveDetailedAuthor) {
+    // the node is just a bare <author>NAME</author> element.
+    getNodeContent(author.name, authorNode);
+  }
+}
+
 void parseAtomFeed(Feed &feed, const pugi::xml_node &rootNode) {
   getNodeAttr(feed.metadata.language.name, rootNode, "lang");
   string globalBase = getNodeAttr(rootNode, "base");
@@ -34,6 +61,10 @@ void parseAtomFeed(Feed &feed, const pugi::xml_node &rootNode) {
     name = node.name();
     if (name == "title") {
       feed.metadata.title = std::move(FeedData::fromXmlNode(node));
+    } else if (name == "id") {
+      getNodeContent(feed.metadata.guid.id, node);
+    } else if (name == "author") {
+      parseAtomAuthor(feed.metadata.author, node);
     } else if (name == "subtitle") {
       feed.metadata.description = std::move(FeedData::fromXmlNode(node));
     } else if (name == "link") {
@@ -43,6 +74,10 @@ void parseAtomFeed(Feed &feed, const pugi::xml_node &rootNode) {
       }
     } else if (name == "updated") {
       feed.metadata.pubDate = FeedDateTime::fromW3cDtf(node);
+    } else if (name == "modified" || name == "created" || name == "issued") {
+      if (feed.metadata.pubDate.empty()) {
+        feed.metadata.pubDate = FeedDateTime::fromRfc822(node);
+      }
     } else if (name == "entry") {
       feed.items.push_back(parseAtomFeedItem(node, globalBase));
     }
@@ -61,7 +96,7 @@ FeedItem parseAtomFeedItem(const pugi::xml_node &entryNode, const std::string &d
     for (auto node: entryNode.children()) {
       name = node.name();
       if (name == "author") {
-        getNodeContent(feedItem.author.name, node);
+        parseAtomAuthor(feedItem.author, node);
       } else if (name == "title") {
         feedItem.title = FeedData::fromXmlNode(node);
       } else if (name == "content") {
@@ -71,9 +106,9 @@ FeedItem parseAtomFeedItem(const pugi::xml_node &entryNode, const std::string &d
         feedItem.guid.isPermaLink = false;
       } else if (name == "published") {
         feedItem.pubDate = FeedDateTime::fromW3cDtf(node);
-      } else if (name == "updated" || name == "created") {
+      } else if (name == "updated" || name == "created" || name == "issued" || name == "modified") {
         if (feedItem.pubDate.empty()) {
-          feedItem.pubDate = FeedDateTime::fromW3cDtf(node);
+          feedItem.pubDate = FeedDateTime::fromRfc822(node);
         }
       } else if (name == "link") {
         string rel = getNodeAttr(node, "rel");

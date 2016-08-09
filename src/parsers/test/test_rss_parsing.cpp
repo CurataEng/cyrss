@@ -11,7 +11,7 @@ using namespace pugi;
 using curata::rss::parsers::getRssType;
 using curata::rss::FeedFormat;
 
-TEST(TestFeedParser, TestGetRssType) {
+TEST(TestRssParsing, TestGetRssType) {
   EXPECT_EQ(FeedFormat::RSS_0_91, getRssType("0.91"));
   EXPECT_EQ(FeedFormat::RSS_0_92, getRssType("0.92"));
   EXPECT_EQ(FeedFormat::RSS_0_94, getRssType("0.94"));

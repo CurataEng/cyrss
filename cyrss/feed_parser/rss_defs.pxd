@@ -51,6 +51,7 @@ cdef extern from "rss/Feed.h" namespace "curata::rss":
         vector[string] categories
 
     cdef cppclass FeedMetadata:
+        FeedGuid guid
         FeedData title
         FeedData description
         FeedLink link
