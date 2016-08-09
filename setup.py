@@ -14,9 +14,7 @@ def root_rel(fpath):
 EXTRA_SRC = (
     'parsers/atom.cpp',
     'parsers/FeedParser.cpp',
-    'parsers/rss09x.cpp',
-    'parsers/rss10.cpp',
-    'parsers/rss20.cpp',
+    'parsers/rss.cpp',
     'parsers/pugi_util.cpp',
     'parsers/time_util.cpp',
     'parsers/url_util.cpp',

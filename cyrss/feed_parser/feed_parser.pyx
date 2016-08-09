@@ -21,6 +21,10 @@ __all__ = ('CyFeed', 'CyFeedItem', 'CyFeedParser', 'parse_feed', 'CyRssException
 class CyRssException(RuntimeError):
     pass
 
+class CyRssTypeError(CyRssException, TypeError):
+    pass
+
+
 cdef class CyFeedItem:
     cdef unicode title_
     cdef unicode title_type_
@@ -145,6 +149,14 @@ cdef class CyFeed:
         def __get__(self):
             return self.pub_date
 
+    property managing_editor:
+        def __get__(self):
+            return self.managing_editor_
+
+    property managingEditor:
+        def __get__(self):
+            return self.managing_editor_
+
     property items:
         def __get__(self):
             return self.items_
@@ -179,7 +191,7 @@ cdef class CyFeedParser:
         elif isinstance(feed_xml, bytes_type):
             return self.parse_bytes(feed_xml)
         else:
-            raise TypeError("expected unicode or bytes type")
+            raise CyRssTypeError("expected unicode or bytes type")
 
 
 cpdef CyFeed parse_feed(object feed_xml):

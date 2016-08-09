@@ -8,10 +8,12 @@
 #include "rss/util.h"
 #include "rss/Feed.h"
 
+
 using namespace std;
 using namespace pugi;
 namespace pugi_util = curata::rss::parsers::pugi_util;
 using curata::rss::parsers::FeedParser;
+
 using curata::rss::Feed;
 using curata::rss::FeedItem;
 

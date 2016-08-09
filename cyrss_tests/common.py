@@ -7,3 +7,8 @@ def get_data_dir():
 def in_data_dir(fpath):
     return os.path.join(get_data_dir(), fpath)
 
+def load_test_data(name):
+    fpath = in_data_dir(name)
+    with open(fpath, 'r') as f:
+        rss_data = f.read()
+    return rss_data

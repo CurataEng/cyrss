@@ -8,13 +8,20 @@
 
 #pragma once
 
+#include <string>
 #include "rss/Feed.h"
 #include "rss/xml/pugixml.hpp"
 
 namespace curata { namespace rss { namespace parsers {
 
+FeedType getRssType(const std::string& versionStr);
 void parseRss09xFeed(Feed& f, const pugi::xml_node&);
 FeedItem parseRss09xFeedItem(const pugi::xml_node&);
+
+void parseRss10Feed(Feed& f, const pugi::xml_node&);
+FeedItem parseRss10FeedItem(const pugi::xml_node&);
+void parseRss20Feed(Feed& feed, const pugi::xml_node&);
+
 
 
 }}} // curata::rss::parsers

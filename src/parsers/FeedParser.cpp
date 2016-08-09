@@ -8,9 +8,7 @@
 
 
 #include "rss/parsers/FeedParser.h"
-#include "rss/parsers/rss20.h"
-#include "rss/parsers/rss10.h"
-#include "rss/parsers/rss09x.h"
+#include "rss/parsers/rss.h"
 #include "rss/parsers/atom.h"
 #include "rss/parsers/pugi_util.h"
 #include "rss/exceptions.h"
@@ -31,28 +29,6 @@ Feed FeedParser::parseFeed(const string &docString) {
   return parseFeed(doc);
 }
 
-FeedType getRssType(const std::string& versionStr) {
-  if (versionStr.empty()) {
-    return FeedType::UNKNOWN;
-  }
-  if (versionStr[0] == '0') {
-    if (versionStr.size() < 4) {
-      return FeedType::UNKNOWN;
-    }
-    if (versionStr == "0.91") {
-      return FeedType::RSS_0_91;
-    } else if (versionStr == "0.92") {
-      return FeedType::RSS_0_92;
-    } else if (versionStr == "0.94") {
-      return FeedType::RSS_0_94;
-    }
-  } else if (versionStr == "2.0" || versionStr == "2") {
-    return FeedType::RSS_2_0;
-  } else if (versionStr == "1.0") {
-    return FeedType::RSS_1_0;
-  }
-  return FeedType::UNKNOWN;
-}
 
 Feed FeedParser::parseFeed(const pugi::xml_document &doc) {
   Feed result;
