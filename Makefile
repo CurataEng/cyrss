@@ -18,7 +18,7 @@ test: test_cpp test_py
 
 release: clean
 	cython --cplus cyrss/feed_parser/*.pyx
-	python setup.py sdist
+	python setup.py sdist upload
 
 .PHONY: test clean test_py test_cpp build_cpp_tests
 

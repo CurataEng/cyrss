@@ -55,6 +55,7 @@ setup(
     packages=[
         'cyrss', 'cyrss.feed_parser'
     ],
+    install_requires=['cchardet>=1.0.0'],
     ext_modules=[get_extension()],
     provides=['cyrss']
 )
