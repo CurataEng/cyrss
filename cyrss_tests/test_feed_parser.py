@@ -20,3 +20,10 @@ class BadInputTests(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             parse_feed(None)
+
+
+class TestReprs(unittest.TestCase):
+    def test_feed_repr(self):
+        jezebel = load_test_data('jezebel_rss_20.xml')
+        self.assertTrue("Jezebel" in repr(jezebel))
+

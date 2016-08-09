@@ -79,3 +79,6 @@ Encodes a unicode string into a utf8 byte string and then parses it into a `CyFe
 Like `parse_bytes`, but assumes that the input is utf8-encoded and does not attempt character encoding detection.  This is more efficient, but you should only use it if you know what you're doing.
 
 
+### TODO
+
+* document exact mapping of RSS/Atom versions to CyFeedItem
