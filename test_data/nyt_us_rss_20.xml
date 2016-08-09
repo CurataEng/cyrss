@@ -1,0 +1,607 @@
+
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; U.S.</title>
+    <link>http://www.nytimes.com/section/us?partner=rss&amp;emc=rss</link>
+    <atom:link rel="self" type="application/rss+xml" href="http://www.nytimes.com/services/xml/rss/nyt/US.xml"/>
+    <description/>
+    <language>en-us</language>
+    <copyright>Copyright 2016  The New York Times Company</copyright>
+    <lastBuildDate>Fri, 05 Aug 2016 15:26:09 GMT </lastBuildDate>
+    <image>
+      <title>NYT &gt; U.S.</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>http://www.nytimes.com/section/us?partner=rss&amp;emc=rss</link>
+    </image>
+    <item>
+      <title>Did Obama&#x2019;s Bill Fix Veterans&#x2019; Heath Care? It&#x2019;s Complicated.</title>
+      <link>http://www.nytimes.com/2016/08/06/us/veterans-heath-care.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/us/veterans-heath-care.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/us/veterans-heath-care.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/07va3/07va3-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>An Army veteran, Henry Banks Sr., waited for prescription drugs at a Veterans Affairs medical center in Fayetteville, N.C., in March 2015.</media:description>
+      <media:credit>Patrick Semansky/Associated Press</media:credit>
+      <description>A breakdown of the changes that were required under the Veterans Access, Choice and Accountability Act of 2014, and how some have faltered.</description>
+      <dc:creator>DAVE PHILIPPS</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 14:49:27 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Veterans</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Veterans Affairs Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Veterans of Foreign Wars</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Disabled American Veterans</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">McDonald, Robert A</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Health Insurance and Managed Care</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Government Accountability Office</category>
+    </item>
+    <item>
+      <title>Boston Police Chief on Defusing Tensions: Relationships Matter</title>
+      <link>http://www.nytimes.com/2016/08/06/us/boston-police-chief-on-defusing-tensions-relationships-matter.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/us/boston-police-chief-on-defusing-tensions-relationships-matter.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/us/boston-police-chief-on-defusing-tensions-relationships-matter.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/06bostonpd-web1/06bostonpd-web1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Boston&#x2019;s police commissioner, William B. Evans, left, during a &#x201C;peace walk&#x201D; through the Roxbury neighborhood last month.</media:description>
+      <media:credit>Kayana Szymczak for The New York Times</media:credit>
+      <description>Commissioner William B. Evans&#x2019;s leadership style and close ties with minority communities have helped keep police-related violence in Boston to a minimum.</description>
+      <dc:creator>KATHARINE Q. SEELYE</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 14:16:38 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Police</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Attacks on Police</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Race and Ethnicity</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Minorities</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Walsh, Martin J</category>
+    </item>
+    <item>
+      <title>For Anne Holton, Tim Kaine&#x2019;s Wife, Elite Circles Are Old Turf</title>
+      <link>http://www.nytimes.com/2016/08/06/us/politics/anne-holton-tim-kaine.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/us/politics/anne-holton-tim-kaine.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/us/politics/anne-holton-tim-kaine.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/04/us/04holton/04holton-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Anne Holton, who is married to the Democratic vice-presidential nominee, Senator Tim Kaine, at a rally on Monday in Richmond, Va.</media:description>
+      <media:credit>Chet Strange for The New York Times</media:credit>
+      <description>She has lived since childhood in a world of politics and power, but relatives and friends describe her as being uncommonly unimpressed by the trappings of privilege.</description>
+      <dc:creator>JASON HOROWITZ</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 09:00:20 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Holton, Anne</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kaine, Timothy M</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Virginia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Vice Presidents and Vice Presidency (US)</category>
+    </item>
+    <item>
+      <title>College Students Protest, Alumni&#x2019;s Fondness Fades and Checks Shrink</title>
+      <link>http://www.nytimes.com/2016/08/05/us/college-protests-alumni-donations.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/college-protests-alumni-donations.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/college-protests-alumni-donations.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/05alums-1/02alums-web1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>A mural of Woodrow Wilson in the Wilson College dining hall at Princeton University, which has been removed. Protesters have unsuccessfully called for the removal of Wilson&#x2019;s name from university buildings and programs.</media:description>
+      <media:credit>Mark Makela for The New York Times</media:credit>
+      <description>A backlash from alumni is an unexpected aftershock of recent campus disruptions, as some colleges have reported a decline in donations and a rise in complaints.</description>
+      <dc:creator>ANEMONA HARTOCOLLIS</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 12:44:07 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Colleges and Universities</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Philanthropy</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Amherst College</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Freedom of Speech and Expression</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Demonstrations, Protests and Riots</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Amherst, Jeffery (1717-97)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Martin, Carolyn A</category>
+    </item>
+    <item>
+      <title>Paul Ryan&#x2019;s Rival, a Long Shot, Tries to Gain an Edge From Donald Trump&#x2019;s Praise</title>
+      <link>http://www.nytimes.com/2016/08/05/us/politics/paul-ryans-gop-opponent-for-house-seen-as-long-shot-gets-a-boost-from-donald-trump.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/politics/paul-ryans-gop-opponent-for-house-seen-as-long-shot-gets-a-boost-from-donald-trump.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/politics/paul-ryans-gop-opponent-for-house-seen-as-long-shot-gets-a-boost-from-donald-trump.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/05ryan/05ryan-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Paul Nehlen, who is challenging Speaker Paul D. Ryan in the Republican primary, in May talked with Mary Ruffolo in Pleasant Prairie, Wis.</media:description>
+      <media:credit>Scott Bauer/Associated Press</media:credit>
+      <description>Paul Nehlen is capitalizing on an opportunity to benefit from an intraparty feud.</description>
+      <dc:creator>NICHOLAS FANDOS</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 00:09:40 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Elections, House of Representatives</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Republican Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Ryan, Paul D Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Nehlen, Paul F III</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Wisconsin</category>
+    </item>
+    <item>
+      <title>The Innovation Campus: Building Better Ideas</title>
+      <link>http://www.nytimes.com/2016/08/07/education/edlife/innovation-campus-entrepreneurship-engineering-arts.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/07/education/edlife/innovation-campus-entrepreneurship-engineering-arts.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/07/education/edlife/innovation-campus-entrepreneurship-engineering-arts.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/07/education/07INNOVATION2/07INNOVATION2-moth-v4.jpg" medium="image" height="151" width="151"/>
+      <media:description>Transparency&#x2019;s the thing. Lassonde Studios, a live/learn building opening this month at the University of Utah, features glass-walled spaces on each residential floor.</media:description>
+      <media:credit>Trina Knudsen</media:credit>
+      <description>Can architecture spur creativity? Universities are investing in big, high-tech buildings in the hope of evoking big, high-tech thinking.</description>
+      <dc:creator>ALEXANDRA LANGE</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 09:00:47 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Colleges and Universities</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Architecture</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Cornell Tech</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">University of Utah</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Northwestern University</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Stanford University</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Wichita State University</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">York University</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">University of Iowa</category>
+    </item>
+    <item>
+      <title>Vexing Question on Patient Surveys: Did We Ease Your Pain?</title>
+      <link>http://www.nytimes.com/2016/08/05/health/pain-treatment-hospitals-emergency-rooms-surveys.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/health/pain-treatment-hospitals-emergency-rooms-surveys.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/health/pain-treatment-hospitals-emergency-rooms-surveys.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/science/05PAIN1/05PAIN1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Dr. S. Michael Keller, a physician at the Marion General Hospital in Indiana, said that after his emergency department issued guidelines to limit the prescription of opioids, patients retaliated by giving the poor satisfaction scores in customer surveys.</media:description>
+      <media:credit>James Brosher for The New York Times</media:credit>
+      <description>Doctors suggest that the link between patient satisfaction scores and Medicare reimbursements could lead to the over-prescription of addictive painkillers.</description>
+      <dc:creator>JAN HOFFMAN and SABRINA TAVERNISE</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 00:12:40 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Pain-Relieving Drugs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hospitals</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Pain</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Health Insurance and Managed Care</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Health and Human Services Department</category>
+    </item>
+    <item>
+      <title>Your Money Adviser: Back-to-School Sales Tax Holidays May Be Skimpier This Year</title>
+      <link>http://www.nytimes.com/2016/08/06/your-money/back-to-school-sales-tax-holidays-may-be-skimpier-this-year.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/your-money/back-to-school-sales-tax-holidays-may-be-skimpier-this-year.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/your-money/back-to-school-sales-tax-holidays-may-be-skimpier-this-year.html?partner=rss&amp;emc=rss"/>
+      <description>Some states are scaling back or even ending the popular tax policy that gives families a small break as their children head back to school.</description>
+      <dc:creator>ANN CARRNS</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 14:01:48 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Sales and Excise Taxes</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Shopping and Retail</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">National Retail Federation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Institute on Taxation and Economic Policy</category>
+    </item>
+    <item>
+      <title>Chip Credit Cards for Dummies (That&#x2019;s All of Us)</title>
+      <link>http://www.nytimes.com/2016/08/06/business/chip-credit-cards-for-dummies.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/business/chip-credit-cards-for-dummies.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/business/chip-credit-cards-for-dummies.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/04/business/04cardchip4/04cardchip4-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Chip-enabled credit cards are being used more often in the United States, but lots of consumers are expressing frustrations with them.</media:description>
+      <media:credit>Bryan Anselm for The New York Times</media:credit>
+      <description>Swipe the card. Nope. Dip the card? Maybe. Feel like an idiot? Definitely.</description>
+      <dc:creator>KAREN WORKMAN</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 12:30:21 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Credit Cards</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computers and the Internet</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Customer Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mobile Commerce and Payments</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+    </item>
+    <item>
+      <title>The 2016 Race: How Donald Trump&#x2019;s &#x2018;Rigged&#x2019; Claim Chips Away at Democracy</title>
+      <link>http://www.nytimes.com/2016/08/06/upshot/how-donald-trumps-rigged-claim-chips-away-at-democracy.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/upshot/how-donald-trumps-rigged-claim-chips-away-at-democracy.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/upshot/how-donald-trumps-rigged-claim-chips-away-at-democracy.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/upshot/05UP-Rigged/05UP-Rigged-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Eight days after the 1960 election, they were still counting ballots in California in the race between John F. Kennedy and Richard Nixon.</media:description>
+      <media:credit>Associated Press</media:credit>
+      <description>Questioning the integrity of the system could undermine public confidence in elections.</description>
+      <dc:creator>BRENDAN NYHAN</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 12:00:22 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Frauds and Swindling</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+    </item>
+    <item>
+      <title>Cory Booker, After Touring a Prison, Renews Call for Criminal Justice Overhaul</title>
+      <link>http://www.nytimes.com/2016/08/06/us/politics/cory-booker-criminal-justice-overhaul.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/us/politics/cory-booker-criminal-justice-overhaul.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/us/politics/cory-booker-criminal-justice-overhaul.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/06/us/06fd-Booker/06fd-Booker-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Senator Cory Booker of New Jersey at a news conference in Washington last month.</media:description>
+      <media:credit>Lauren Victoria Burke/Associated Press</media:credit>
+      <description>The New Jersey senator said that though he was determined to push for legislation cutting mandatory minimum sentences, he was not confident it would move this year.</description>
+      <dc:creator>CARL HULSE</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 11:00:02 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Law and Legislation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Prisons and Prisoners</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Booker, Cory A</category>
+    </item>
+    <item>
+      <title>The 2016 Race: Why a Meaningful Shift in the Trump-Clinton Race May Be at Hand</title>
+      <link>http://www.nytimes.com/2016/08/06/upshot/why-a-meaningful-shift-in-the-trump-clinton-race-may-be-at-hand.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/upshot/why-a-meaningful-shift-in-the-trump-clinton-race-may-be-at-hand.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/upshot/why-a-meaningful-shift-in-the-trump-clinton-race-may-be-at-hand.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/06/upshot/06UP-Polls/06UP-Polls-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Hillary Clinton campaigning in Denver on Wednesday. It has been a week of good polls for her.</media:description>
+      <media:credit>Ruth Fremson/The New York Times</media:credit>
+      <description>Polling suggests Hillary Clinton is benefiting from support from Bernie Sanders&#x2019;s backers, and from Donald Trump&#x2019;s self-induced wounds.</description>
+      <dc:creator>NATE COHN</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 11:00:02 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Clinton, Hillary Rodham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Polls and Public Opinion</category>
+    </item>
+    <item>
+      <title>Hillary Clinton to Address a Rare Audience: Journalists</title>
+      <link>http://www.nytimes.com/2016/08/06/us/politics/hillary-clinton-nabj-nahj.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/us/politics/hillary-clinton-nabj-nahj.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/us/politics/hillary-clinton-nabj-nahj.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/06/us/06fd-hillary/06fd-hillary-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Hillary Clinton speaking at a campaign rally in Pittsburgh on Saturday.</media:description>
+      <media:credit>Ruth Fremson/The New York Times</media:credit>
+      <description>Mrs. Clinton, who speaks frequently to black and Latino groups but has given only a few news conferences, will deliver remarks to an annual convention of minority journalists.</description>
+      <dc:creator>AMY CHOZICK</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 10:00:21 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">National Assn of Black Journalists</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Clinton, Hillary Rodham</category>
+    </item>
+    <item>
+      <title>Transgender on the Force</title>
+      <link>http://www.nytimes.com/2016/08/07/nyregion/transgender-on-the-force.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/07/nyregion/transgender-on-the-force.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/07/nyregion/transgender-on-the-force.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/07/nyregion/07TRANSGENDER1/07TRANSGENDER1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Officer Aiden Budd began his gender transition in the year before he started at the Police Academy in 2015. &#x2018;I remember asking God a couple of times as a child why I wasn&#x2019;t born a boy,&#x2019; he said.</media:description>
+      <media:credit>Sam Hodgson for The New York Times</media:credit>
+      <description>Police officers coming to terms with their gender identity said they faced a dilemma of living what feels like a fraudulent life or risked being rejected from the tight-knit fellowship of law enforcement.</description>
+      <dc:creator>RICK ROJAS</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 09:00:20 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Police</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Transgender and Transsexuals</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Manhattan (NYC)</category>
+    </item>
+    <item>
+      <title>Mark Kirk in Electoral Vise as Republican in Illinois Senate Race</title>
+      <link>http://www.nytimes.com/2016/08/06/us/politics/mark-kirk-republican-illinois-senate-race.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/us/politics/mark-kirk-republican-illinois-senate-race.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/us/politics/mark-kirk-republican-illinois-senate-race.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/06/us/06kirk-web1/31kirk-web1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Senator Mark S. Kirk at a news conference last month in Chicago. He became the first member of Congress to rescind his endorsement of Donald J. Trump.</media:description>
+      <media:credit>Alyssa Schukar for The New York Times</media:credit>
+      <description>Mr. Kirk is among Republican incumbents who want to put distance between themselves and Donald Trump, but in doing so, they risk alienating base voters.</description>
+      <dc:creator>DAVID M. HERSZENHORN</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 09:00:17 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Elections, Senate</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kirk, Mark Steven</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Duckworth, L Tammy</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Republican Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Illinois</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Voting and Voters</category>
+    </item>
+    <item>
+      <title>As Trump Rises, &#x2018;Reformocons&#x2019; See Chance to Update G.O.P.&#x2019;s Economic Views</title>
+      <link>http://www.nytimes.com/2016/08/06/us/politics/as-trump-rises-reformocons-see-chance-to-update-gops-economic-views.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/06/us/politics/as-trump-rises-reformocons-see-chance-to-update-gops-economic-views.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/06/us/politics/as-trump-rises-reformocons-see-chance-to-update-gops-economic-views.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/03/us/04REPUBS-web/04REPUBS-web-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Donald J. Trump greeted supporters at a rally in Denver on July 29.</media:description>
+      <media:credit>Nick Cote for The New York Times</media:credit>
+      <description>Conservative thinkers have felt emboldened to press their party to reshape its canon to more directly benefit the workers it has often taken for granted.</description>
+      <dc:creator>JACKIE CALMES</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 09:00:16 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Income Tax</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Democratic National Convention</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Republican National Convention</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Joseph R Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Douthat, Ross G</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Norquist, Grover G</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Romney, Mitt</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Heritage Foundation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">American Conservative, The (Magazine)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Republican Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Medicare</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Tax Credits, Deductions and Exemptions</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+    </item>
+    <item>
+      <title>Dylann Roof Attacked by a Fellow Inmate, Officials Say</title>
+      <link>http://www.nytimes.com/2016/08/05/us/dylann-roof-attack-south-carolina-jail.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/dylann-roof-attack-south-carolina-jail.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/dylann-roof-attack-south-carolina-jail.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/05xp-dylannroof_web1/05xp-dylannroof_web1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Dylann Roof being escorted from the Cleveland County Courthouse in Shelby, N.C., last year.</media:description>
+      <media:credit>Chuck Burton/Associated Press</media:credit>
+      <description>Mr. Roof, the white man charged in the massacre of nine black parishioners at a Charleston, S.C., church, was said to have been assaulted by a black man.</description>
+      <dc:creator>CHRISTOPHER MELE</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 02:02:06 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Charleston, SC, Shooting (2015)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Roof, Dylann Storm</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Murders, Attempted Murders and Homicides</category>
+    </item>
+    <item>
+      <title>Obama Disputes Claim of &#x2018;Rigged&#x2019; Contest</title>
+      <link>http://www.nytimes.com/video/us/elections/100000004570266/obama-disputes-claim-of-rigged-contest.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/video/us/elections/100000004570266/obama-disputes-claim-of-rigged-contest.html</guid>
+      <description>Asked by a reporter to respond to Donald J. Trump&#x2019;s accusations that the election was &#x201C;rigged," President Obama said the claim was &#x201C;ridiculous.&#x201D;</description>
+      <dc:creator/>
+      <pubDate>Fri, 05 Aug 2016 01:50:57 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/des">Corruption (Institutional)</category>
+      <category domain="http://www.nytimes.com/namespaces/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/nyt_per">Obama, Barack</category>
+      <category domain="http://www.nytimes.com/namespaces/des">Pentagon Building</category>
+      <category domain="http://www.nytimes.com/namespaces/nyt_geo">Arlington (Va)</category>
+    </item>
+    <item>
+      <title>Steven LaTourette, Congressman Who Despised Gridlock, Dies at 62</title>
+      <link>http://www.nytimes.com/2016/08/05/us/steven-latourette-congressman-who-despised-gridlock-dies-at-62.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/steven-latourette-congressman-who-despised-gridlock-dies-at-62.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/steven-latourette-congressman-who-despised-gridlock-dies-at-62.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/05LatouretteObit/05LatouretteObit-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Steven C. LaTourette, a Republican congressman from Ohio, on Capitol Hill in 2009.</media:description>
+      <media:credit>Susan Walsh/Associated Press</media:credit>
+      <description>Mr. LaTourette, a centrist Ohio Republican, retired after nine terms in Congress because he was disgusted with Tea Party insurgents.</description>
+      <dc:creator>SAM ROBERTS</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 01:06:29 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Tea Party Movement</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Obituaries)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Republican Main Street Partnership</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Republican Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">LaTourette, Steven C</category>
+    </item>
+    <item>
+      <title>Spraying Begins in Miami to Combat the Zika Virus</title>
+      <link>http://www.nytimes.com/2016/08/05/health/spraying-begins-in-miami-to-combat-the-zika-virus.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/health/spraying-begins-in-miami-to-combat-the-zika-virus.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/health/spraying-begins-in-miami-to-combat-the-zika-virus.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/05ZIKA3-SUB/05ZIKA3-SUB-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Dr. Thomas R. Frieden, the director of the Centers for Disease Control and Prevention, at a news conference in Florida on Thursday.</media:description>
+      <media:credit>Joe Skipper/Reuters</media:credit>
+      <description>Officials said initial results showed a large number of mosquitoes were killed in a part of the city where a dozen locally transmitted cases had been reported.</description>
+      <dc:creator>LIZETTE ALVAREZ and PAM BELLUCK</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 01:02:50 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Zika Virus</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mosquitoes</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Centers for Disease Control and Prevention</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Miami (Fla)</category>
+    </item>
+    <item>
+      <title>Debate Over Trump&#x2019;s Fitness Raises Issue of Checks on Nuclear Power</title>
+      <link>http://www.nytimes.com/2016/08/05/science/donald-trump-nuclear-codes.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/science/donald-trump-nuclear-codes.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/science/donald-trump-nuclear-codes.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/science/05NUKE/05NUKE-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>The president&#x2019;s emergency satchel &#x2014; a black briefcase full of war plans, authentication codes, and communication devices follows him (or her) just about everywhere, carried by an aide trained in the procedures.</media:description>
+      <media:credit>Clockwise from top left: Brooks Kraft LLC/Corbis, via Getty; Stephen Crowley/The NYT; Diana Walker/Time &amp; Life Pictures, via Getty; Bettmann Archive/Getty; Diana Walker/Time &amp; Life Pictures, via Getty; J. Scott Applewhite/AP; Ron Edmonds/AP</media:credit>
+      <description>There are no checks on a president&#x2019;s power to wage nuclear war, though history suggests that there may be ways to slow down or derail the process.</description>
+      <dc:creator>WILLIAM J. BROAD and DAVID E. SANGER</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 00:57:19 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Nuclear Weapons</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Presidents and Presidency (US)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Defense Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Federation of American Scientists</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">National Security Council</category>
+    </item>
+    <item>
+      <title>Former Virginia Police Officer Convicted in Killing of Black Teenager</title>
+      <link>http://www.nytimes.com/2016/08/05/us/former-virginia-police-officer-convicted-in-killing-of-black-teenager.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/former-virginia-police-officer-convicted-in-killing-of-black-teenager.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/former-virginia-police-officer-convicted-in-killing-of-black-teenager.html?partner=rss&amp;emc=rss"/>
+      <description>A white ex-officer was convicted of manslaughter with the jury recommending he serve two-and-a-half years in prison for killing an unarmed black man.</description>
+      <dc:creator>THE ASSOCIATED PRESS</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 00:39:56 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Police Brutality, Misconduct and Shootings</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Murders, Attempted Murders and Homicides</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Blacks</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Rankin, Stephen D (Portsmouth, Va, Police Officer)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Portsmouth (Va)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Walmart Stores Inc</category>
+    </item>
+    <item>
+      <title>Tax-Avoiding Mergers Find Champion in U.S. Chamber of Commerce</title>
+      <link>http://www.nytimes.com/2016/08/05/business/dealbook/tax-avoiding-mergers-find-champion-in-us-chamber-of-commerce.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/business/dealbook/tax-avoiding-mergers-find-champion-in-us-chamber-of-commerce.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/business/dealbook/tax-avoiding-mergers-find-champion-in-us-chamber-of-commerce.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/business/05DB-INVERSIONS/05DB-INVERSIONS-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Representative Kevin Brady, a Texas Republican who is chairman of the House Ways and Means Committee, has called the administration&#x2019;s rules against tax inversions &#x201C;damaging.&#x201D;</media:description>
+      <media:credit>Chip Somodevilla/Getty Images</media:credit>
+      <description>The Chamber is leading a legal fight in Texas to overturn Treasury rules aimed at curbing mergers done for tax reasons.</description>
+      <dc:creator>LIZ MOYER and LESLIE PICKER</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 23:35:16 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">United States Chamber of Commerce</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Suits and Litigation (Civil)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Regulation and Deregulation of Industry</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Corporate Taxes</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Mergers, Acquisitions and Divestitures</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Pfizer Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Allergan Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Treasury Department</category>
+    </item>
+    <item>
+      <title>Arrested Protester of Baton Rouge Police Shooting Files Suit</title>
+      <link>http://www.nytimes.com/2016/08/05/us/arrested-protester-of-baton-rouge-police-shooting-files-suit.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/arrested-protester-of-baton-rouge-police-shooting-files-suit.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/arrested-protester-of-baton-rouge-police-shooting-files-suit.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/05batonrouge/05batonrouge-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>DeRay Mckesson, a prominent figure in the Black Lives Matter movement, was arrested by the police in Baton Rouge, La., during a protest last month.</media:description>
+      <media:credit>Max Becherer/Associated Press</media:credit>
+      <description>The suit by DeRay Mckesson says that the police &#x201C;employed unconstitutional tactics to disturb, disrupt, infringe upon and criminalize&#x201D; the rights of assembly and free speech.</description>
+      <dc:creator>CAMPBELL ROBERTSON</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 22:37:31 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Demonstrations, Protests and Riots</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Police Brutality, Misconduct and Shootings</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Suits and Litigation (Civil)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">American Civil Liberties Union</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Mckesson, Deray (1985- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Baton Rouge (La)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Louisiana</category>
+    </item>
+    <item>
+      <title>Another Airbag Maker Is Under Scrutiny After Fatal Rupture</title>
+      <link>http://www.nytimes.com/2016/08/05/business/arc-airbag-investigation.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/business/arc-airbag-investigation.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/business/arc-airbag-investigation.html?partner=rss&amp;emc=rss"/>
+      <description>A death in Canada was the first known fatality linked to a rupture in an airbag from a supplier other than Takata.</description>
+      <dc:creator>HIROKO TABUCHI</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 22:35:37 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Automobile Safety Features and Defects</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">ARC Automotive Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Hyundai Motor Co</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">National Highway Traffic Safety Administration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Takata Corp</category>
+    </item>
+    <item>
+      <title>Bar Association Considers Striking &#x2018;Honeys&#x2019; From the Courtroom</title>
+      <link>http://www.nytimes.com/2016/08/05/business/dealbook/sexual-harassment-ban-is-on-the-abas-docket.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/business/dealbook/sexual-harassment-ban-is-on-the-abas-docket.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/business/dealbook/sexual-harassment-ban-is-on-the-abas-docket.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/business/05DB-WOMENLAW/05DB-WOMENLAW-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>An opposing lawyer was fined and rebuked by a judge for making a sexist remark to Lori Rifkin, who said she was &#x201C;well accustomed&#x201D; to such comments.</media:description>
+      <media:credit>Jason Henry for The New York Times</media:credit>
+      <description>An effort to bar sexist or discriminatory comments by lawyers addressing each other has been criticized for inhibiting the ability to speak freely.</description>
+      <dc:creator>ELIZABETH OLSON</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 22:20:28 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Legal Profession</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Women and Girls</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Sexual Harassment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">American Bar Assn</category>
+    </item>
+    <item>
+      <title>Hillary Clinton to Animal Rights Protesters: Trumps &#x2018;Have Killed a Lot of Animals&#x2019;</title>
+      <link>http://www.nytimes.com/2016/08/05/us/politics/hillary-clinton-to-animal-rights-protesters-trumps-have-killed-a-lot-of-animals.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/politics/hillary-clinton-to-animal-rights-protesters-trumps-have-killed-a-lot-of-animals.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/politics/hillary-clinton-to-animal-rights-protesters-trumps-have-killed-a-lot-of-animals.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/05fd-clintonprotest/05fd-vegas-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Secret Service agents confronted animal rights activists at a Clinton rally in Las Vegas on Thursday.</media:description>
+      <media:credit>Ruth Fremson/The New York Times</media:credit>
+      <description>Secret Service agents briefly surrounded the Democratic nominee as she was interrupted at a campaign event in Las Vegas.</description>
+      <dc:creator>TRIP GABRIEL</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 22:01:29 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+    </item>
+    <item>
+      <title>Obama Writes Feminist Essay in Glamour</title>
+      <link>http://www.nytimes.com/2016/08/05/us/obama-writes-feminist-essay-in-glamour.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/obama-writes-feminist-essay-in-glamour.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/obama-writes-feminist-essay-in-glamour.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/04/us/04sasha_xp/04sasha_xp-moth-v2.jpg" medium="image" height="151" width="151"/>
+      <media:description>President Obama and Michelle Obama with their daughters, Malia and Sasha, in 2015.</media:description>
+      <media:credit>Carolyn Kaster/Associated Press</media:credit>
+      <description>The president wrote a 1,500-word essay in the magazine, calling for equality and explaining that it was important to his daughters that he be a feminist.</description>
+      <dc:creator>DANIEL VICTOR</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 21:49:15 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Obama, Barack</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Women's Rights</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Glamour (Magazine)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Magazines</category>
+    </item>
+    <item>
+      <title>Phoenix Rattled as Serial Gunman Leaves 7 Dead and 2 Injured</title>
+      <link>http://www.nytimes.com/2016/08/05/us/phoenix-unnerved-as-serial-shooter-leaves-7-dead-and-2-injured.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/phoenix-unnerved-as-serial-shooter-leaves-7-dead-and-2-injured.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/phoenix-unnerved-as-serial-shooter-leaves-7-dead-and-2-injured.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/04/us/xp-phoenix-image/xp-phoenix-image-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>A composite sketch of a possible suspect in a series of fatal shootings in Phoenix.</media:description>
+      <media:credit>Phoenix Police Department, via Associated Press</media:credit>
+      <description>The authorities released a sketch of a man suspected of nine attacks and raised a reward for information to $50,000.</description>
+      <dc:creator>CHRISTINE HAUSER</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 19:51:43 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Murders, Attempted Murders and Homicides</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Federal Bureau of Investigation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Phoenix (Ariz)</category>
+    </item>
+    <item>
+      <title>11-Year-Old Grills Mike Pence on &#x2018;Softening Up&#x2019; Donald Trump&#x2019;s Words</title>
+      <link>http://www.nytimes.com/2016/08/05/us/politics/mike-pence-campaign.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/politics/mike-pence-campaign.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/politics/mike-pence-campaign.html?partner=rss&amp;emc=rss"/>
+      <description>The Indiana governor was asked whether his role in a Trump administration would be to basically clean up after his commander in chief&#x2019;s statements.</description>
+      <dc:creator>NOAH REMNICK</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 18:54:45 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+    </item>
+    <item>
+      <title>Donald Trump and Mike Pence Again Diverge on Endorsements</title>
+      <link>http://www.nytimes.com/2016/08/05/us/politics/donald-trump-paul-ryan-gop.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/politics/donald-trump-paul-ryan-gop.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/politics/donald-trump-paul-ryan-gop.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/05fd-trump/05fd-trump-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>House Speaker Paul D. Ryan at the Republican National Convention last month in Cleveland.</media:description>
+      <media:credit>Doug Mills/The New York Times</media:credit>
+      <description>Having already split with Mr. Trump over endorsing Paul Ryan, Mr. Pence told a Virginia television news station he would also support two snubbed Republican senators.</description>
+      <dc:creator>ALEXANDER BURNS and NOAH REMNICK</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 02:36:33 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Ryan, Paul D Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Endorsements</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Bader, Jerry</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Wisconsin</category>
+    </item>
+    <item>
+      <title>Questions and Answers on Voter Fraud</title>
+      <link>http://www.nytimes.com/2016/08/05/us/voter-id-laws-donald-trump.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/voter-id-laws-donald-trump.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/voter-id-laws-donald-trump.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/04/us/04VOTERID-web/04VOTERID-web-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>A voter arrived at the Oaklawn Language Academy in Charlotte, N.C., during the Super Tuesday primary contests in March.</media:description>
+      <media:credit>Travis Dove for The New York Times</media:credit>
+      <description>Donald J. Trump, denouncing recent rulings against voter identification laws, suggested that fraud at the polls is common. Experts say that is wrong.</description>
+      <dc:creator>ALAN BLINDER</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 16:53:34 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Voter Registration and Requirements</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Frauds and Swindling</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Government Accountability Office</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Justice Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Identification Devices</category>
+    </item>
+    <item>
+      <title>N.I.H. May Fund Human-Animal Stem Cell Research</title>
+      <link>http://www.nytimes.com/2016/08/05/health/stem-cell-research-ban.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/health/stem-cell-research-ban.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/health/stem-cell-research-ban.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/science/05STEMCELLSALT1/05STEMCELLSALT1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>A photomicrograph showing stem cells. The N.I.H. is considering changing the policy for funding experiments that include both human and animal stem cells.</media:description>
+      <media:credit>Ryohichi Sugimura/Boston Children&#x2019;s Hospital</media:credit>
+      <description>The agency had banned funding for these kinds of experiments last September, but is reconsidering allowing some under strict conditions.</description>
+      <dc:creator>GINA KOLATA</dc:creator>
+      <pubDate>Fri, 05 Aug 2016 00:32:38 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Stem Cells</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Research</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">National Institutes of Health</category>
+    </item>
+    <item>
+      <title>With Billionaires Backing Her, Hillary Clinton Must Confront How to Deploy Them</title>
+      <link>http://www.nytimes.com/2016/08/05/us/politics/with-billionaires-backing-her-hillary-clinton-must-confront-how-to-deploy-them.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/us/politics/with-billionaires-backing-her-hillary-clinton-must-confront-how-to-deploy-them.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/us/politics/with-billionaires-backing-her-hillary-clinton-must-confront-how-to-deploy-them.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/us/05fd-markcuban/05fd-markcuban-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>The billionaire Mark Cuban at a campaign rally for Hillary Clinton in Pittsburgh on Saturday.</media:description>
+      <media:credit>Justin Sullivan/Getty Images</media:credit>
+      <description>Members of the ultra-wealthy such as Mark Cuban, Warren E. Buffett and Michael R. Bloomberg are finding varied roles in a campaign focused in part on income inequality.</description>
+      <dc:creator>AMY CHOZICK</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 16:33:41 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+    </item>
+    <item>
+      <title>Cleveland Gets an Art Triennial</title>
+      <link>http://www.nytimes.com/2016/08/05/arts/design/cleveland-gets-an-art-triennial.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/08/05/arts/design/cleveland-gets-an-art-triennial.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/08/05/arts/design/cleveland-gets-an-art-triennial.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/08/05/arts/05triennial-item-1/05triennial-item-1-moth-v4.jpg" medium="image" height="151" width="151"/>
+      <media:description>Visitors to Cleveland take in the skyline. A group of Cleveland boosters hopes to make the city a destination for art.</media:description>
+      <media:credit>Aaron Josefczyk/Reuters</media:credit>
+      <description>The city wants to attract visitors and international attention with contemporary art.</description>
+      <dc:creator>RANDY KENNEDY</dc:creator>
+      <pubDate>Thu, 04 Aug 2016 15:34:41 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Art</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_keyword">Front International: Cleveland Exhibition for Contemporary Art</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Bidwell, Fred</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">An American City (Exhibit)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Cleveland (Ohio)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Grabner, Michelle</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Hoffmann, Jens</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Cleveland Museum of Art</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Allen Memorial Art Museum</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Cleveland Institute of Art</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Museum of Contemporary Art Cleveland</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Akron Art Museum</category>
+    </item>
+  </channel>
+</rss>

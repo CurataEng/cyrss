@@ -1,0 +1,7 @@
+recursive-include cyrss *.h
+recursive-include cyrss *.cpp
+recursive-include cyrss *.pxd
+recursive-include src *.cpp
+recursive-include include *.h
+recursive-include include *.hpp
+

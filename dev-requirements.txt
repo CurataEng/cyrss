@@ -1,0 +1,4 @@
+Cython==0.24.1
+pytest==2.9.2
+feedparser==5.2.1
+ipython==5.0.0

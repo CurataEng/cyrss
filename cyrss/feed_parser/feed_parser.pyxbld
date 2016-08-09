@@ -1,0 +1,33 @@
+import os
+from distutils.extension import Extension
+
+def make_ext(modname, pyxfilename):
+    here = os.path.dirname(os.path.realpath(__file__))
+    include_dir = os.path.realpath(os.path.join(here, '../../include'))
+    src_dir = os.path.realpath(os.path.join(here, '../../src'))
+    extra_src = [
+        'parsers/atom.cpp',
+        'parsers/FeedParser.cpp',
+        'parsers/rss09x.cpp',
+        'parsers/rss10.cpp',
+        'parsers/rss20.cpp',
+        'parsers/pugi_util.cpp',
+        'parsers/time_util.cpp',
+        'parsers/url_util.cpp',
+        'xml/pugixml.cpp',
+        'util.cpp',
+        'exceptions.cpp'
+    ]
+    extra_src = list(map(
+        lambda f: os.path.join(src_dir, f),
+        extra_src
+    ))
+    return Extension(modname,
+            sources=[pyxfilename] + extra_src,
+            include_dirs = [here, include_dir],
+            libraries=['glog'],
+            language='c++',
+            extra_compile_args=['--std=c++11']
+        )
+
+

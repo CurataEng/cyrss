@@ -1,0 +1,8 @@
+*.pyc
+*.pyxbldc
+cy_feed_parser.cpp
+feed_parser.cpp
+benchmarker.cpp
+compat.cpp
+
+
