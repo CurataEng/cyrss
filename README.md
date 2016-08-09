@@ -32,7 +32,6 @@ The c++ component of cyrss has no external dependencies other than a c++11-capab
 The Python library has an additional dependency on `cchardet` for character encoding detection.  Installing the library does not require Cython to be installed, but building the release tarball does.
 
 ## Licensing
-cyrss contains code from two MIT-licensed open source projects, `newsbeuter` and `pugixml`.  Curata is releasing it under.... *LICENSE (fixme)*
 
 ## Encoding
 cyrss uses utf-8 strings internally, but accepts any of the `unicode`/`str`/`bytes` types from Python 2 or Python 3.  `bytes` types can be in any encoding: `cchardet` is used to detect and convert non-utf8 encodings prior to parsing.
@@ -144,6 +143,12 @@ Valgrind often shows some false positives from internal libstdc++ functions.  As
 Valgrind will often show some number of bytes as `still reachable`.  This is fine.
 
 
-### TODO
+## License
 
-* document exact mapping and precedence of RSS/Atom attributes to CyFeed / CyFeedItem
+`cyrss` is available under the MIT license.
+
+This library includes a vendored copy of `pugixml`, which is also under the MIT license.
+
+It also contains some code adapted from the open source `newsbeuter` project, which is also licensed under MIT. (Most of that code is no longer recognizable.)
+
+
