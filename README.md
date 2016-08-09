@@ -31,8 +31,6 @@ In this particular benchmark, `feedparser` takes around 3.4 seconds to parse 100
 The c++ component of cyrss has no external dependencies other than a c++11-capable compiler.
 The Python library has an additional dependency on `cchardet` for character encoding detection.  Installing the library does not require Cython to be installed, but building the release tarball does.
 
-## Licensing
-
 ## Encoding
 cyrss uses utf-8 strings internally, but accepts any of the `unicode`/`str`/`bytes` types from Python 2 or Python 3.  `bytes` types can be in any encoding: `cchardet` is used to detect and convert non-utf8 encodings prior to parsing.
 
