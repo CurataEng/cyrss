@@ -4,12 +4,12 @@
 The underlying library is in c++, with the bindings written in Cython.
 It handles byte or unicode strings in both Python 2 and Python 3.
 
-## installing
+## Installing
 ```bash
 pip install cyrss
 ```
 
-## simple example
+## Simple Example
 ```python
 from cyrss import parse_feed
 import requests
@@ -23,21 +23,21 @@ for entry in feed.items:
 See the detailed API further down in the readme.
 
 
-## performance
+## Performance
 In an [unscientific benchmark](./bench.py), `cyrss` hovers around 100x the speed of the popular `feedparser` library.
 In this particular benchmark, `feedparser` takes around 3.4 seconds to parse 100 feeds.  `cyrss` does the same in around 0.03 seconds.
 
-## dependencies
+## Dependencies
 The c++ component of cyrss has no external dependencies other than a c++11-capable compiler.
 The Python library has an additional dependency on `cchardet` for character encoding detection.  Installing the library does not require Cython to be installed, but building the release tarball does.
 
-## licensing
+## Licensing
 cyrss contains code from two MIT-licensed open source projects, `newsbeuter` and `pugixml`.  Curata is releasing it under.... *LICENSE (fixme)*
 
-## encoding
+## Encoding
 cyrss uses utf-8 strings internally, but accepts any of the `unicode`/`str`/`bytes` types from Python 2 or Python 3.  `bytes` types can be in any encoding: `cchardet` is used to detect and convert non-utf8 encodings prior to parsing.
 
-## atom/rss versions
+## RSS/Atom versions
 cyrss detects and handles the various versions of RSS and Atom.  The resulting `CyFeed` and `CyFeedItem` objects have a normalized set of properties from the two standards (see the API section).
 
 
