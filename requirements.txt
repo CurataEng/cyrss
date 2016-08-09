@@ -1,1 +1,1 @@
-cchardet==1.0.0
+cchardet>=1.0.0

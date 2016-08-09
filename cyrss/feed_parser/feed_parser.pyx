@@ -36,6 +36,7 @@ cdef class CyFeedItem:
     cdef unicode pubDate_
     cdef unicode guid_
     cdef unicode enclosure_url_
+    cdef unicode enclosure_type_
     cdef unicode content_encoded_
     cdef unicode itunes_summary_
     cdef unicode base_
@@ -51,6 +52,7 @@ cdef class CyFeedItem:
         self.pubDate_ = cpp_feed_item.pubDate.decode('utf-8')
         self.guid_ = cpp_feed_item.guid.decode('utf-8')
         self.enclosure_url_ = cpp_feed_item.enclosure_url.decode('utf-8')
+        self.enclosure_type_ = cpp_feed_item.enclosure_type.decode('utf-8')
         self.content_encoded_ = cpp_feed_item.content_encoded.decode('utf-8')
         self.itunes_summary_ = cpp_feed_item.itunes_summary.decode('utf-8')
         self.base_ = cpp_feed_item.base.decode('utf-8')
@@ -95,10 +97,13 @@ cdef class CyFeedItem:
         def __get__(self):
             return self.guid_
 
-    property enclosure_url_:
+    property enclosure_url:
         def __get__(self):
-            return self.guid_
+            return self.enclosure_url_
 
+    property enclosure_type:
+        def __get__(self):
+            return self.enclosure_type_
 
 cdef class CyFeed:
     cdef unicode title_
@@ -143,11 +148,11 @@ cdef class CyFeed:
 
     property pub_date:
         def __get__(self):
-            return self.pub_date
+            return self.pub_date_
 
     property pubDate:
         def __get__(self):
-            return self.pub_date
+            return self.pub_date_
 
     property managing_editor:
         def __get__(self):

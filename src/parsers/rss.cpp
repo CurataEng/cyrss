@@ -62,6 +62,8 @@ void parseRss09xFeed(Feed& feed, const pugi::xml_node &rootNode) {
       feed.description = getNodeContent(node);
     } else if (name == "managingEditor") {
       feed.managingEditor = getNodeContent(node);
+    } else if (name == "pubDate") {
+      feed.pubDate = getNodeContent(node);
     } else if (name == "item") {
       feed.items.push_back(parseRss09xFeedItem(node));
     }

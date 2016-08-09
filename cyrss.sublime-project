@@ -9,7 +9,11 @@
 				".cache",
 				"dist"
 			],
-			"path": "."
+			"path": ".",
+			"file_exclude_patterns": [
+				"cyrss/feed_parser/*.cpp",
+				"cyrss/feed_parser/*.pyxbldc"
+			]
 		}
 	]
 }
