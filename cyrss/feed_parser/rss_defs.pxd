@@ -34,6 +34,7 @@ cdef extern from "rss/Feed.h" namespace "curata::rss":
 
     cdef struct FeedData:
         string data
+        string getTypeString()
 
     cdef cppclass FeedItem:
         FeedEntryGuid guid

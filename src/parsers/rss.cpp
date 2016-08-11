@@ -101,10 +101,10 @@ FeedItem parseRss09xFeedItem(const pugi::xml_node &itemNode) {
       feedItem.pubDate = FeedDateTime::fromW3cDtf(child);
     } else if (name == "author") {
       getNodeContent(feedItem.author.name, child);
-    } else if (name == "dc:author" && !feedItem.author.name.size()) {
-      getNodeContent(feedItem.author.name, child);
-    } else if (name == "creator" && !feedItem.author.name.size()) {
-      getNodeContent(feedItem.author.name, child);
+    } else if (name == "dc:author" || name == "creator" || name == "dc:creator") {
+        if (!feedItem.author.name.size()) {
+          getNodeContent(feedItem.author.name, child);
+        }
     } else if (name == "enclosure") {
       pugi_util::getNodeAttr(feedItem.enclosure.link.url, child, "url");
       pugi_util::getNodeAttr(feedItem.enclosure.dtype, child, "type");

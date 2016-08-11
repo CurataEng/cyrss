@@ -49,7 +49,7 @@ cdef class CyFeedItem:
 
     property title_type:
         def __get__(self):
-            return self.feed_item_.title.dtype.decode('utf-8')
+            return self.feed_item_.title.getTypeString().decode('utf-8')
 
     property description:
         def __get__(self):
@@ -57,7 +57,7 @@ cdef class CyFeedItem:
 
     property description_type:
         def __get__(self):
-            return self.feed_item_.description.dtype.decode('utf-8')
+            return self.feed_item_.description.getTypeString().decode('utf-8')
 
     property summary:
         def __get__(self):
@@ -65,7 +65,7 @@ cdef class CyFeedItem:
 
     property summary_type:
         def __get__(self):
-            return self.feed_item_.summary.dtype.decode('utf-8')
+            return self.feed_item_.summary.getTypeString().decode('utf-8')
 
     property link:
         def __get__(self):

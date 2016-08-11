@@ -16,6 +16,19 @@ FeedDataType feedDataTypeOfString(const std::string &typeStr) {
   return FeedDataType::UNKNOWN;
 }
 
+std::string stringOfFeedDataType(FeedDataType dtype) {
+  switch(dtype) {
+    case FeedDataType::TEXT:
+      return "text";
+    case FeedDataType::HTML:
+      return "html";
+    case FeedDataType::UNKNOWN:
+    default:
+      return "";
+  }
+  return "";
+}
+
 FeedData FeedData::fromXmlNode(const pugi::xml_node &node) {
   FeedData feedData;
   pugi_util::getNodeContent(feedData.data, node);
@@ -24,6 +37,10 @@ FeedData FeedData::fromXmlNode(const pugi::xml_node &node) {
     feedData.dtype = FeedDataType::TEXT;
   }
   return feedData;
+}
+
+std::string FeedData::getTypeString() {
+  return stringOfFeedDataType(dtype);
 }
 
 bool FeedData::empty() const {

@@ -47,7 +47,7 @@ def get_extensions():
 
 setup(
     name='cyrss',
-    version='1.0.2',
+    version='1.0.3',
     description="A fast RSS parser",
     license='MIT',
     package_data={

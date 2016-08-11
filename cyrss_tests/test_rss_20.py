@@ -10,6 +10,10 @@ class TestRss20Sanity(unittest.TestCase):
         data = load_test_data('jezebel_rss_20.xml')
         feed = parse_feed(data)
         self.assertTrue(u"Celebrity, Sex, Fashion" in feed.description)
+        entry1 = feed.items[0]
+        self.assertEqual(u"Madeleine Davies", entry1.author)
+        expected_start = "<img src=\"https://i.kinja-img.com/gawker-media/image/upload/s--v7hy1Ig---/c_fit,fl_progressive,q_80,w_636/uasglfrbmqr1l2t1hxc1.jpg\" />"
+        self.assertTrue(entry1.description.startswith(expected_start))
 
     def test_sanity_2(self):
         data = load_test_data('nyt_us_rss_20.xml')

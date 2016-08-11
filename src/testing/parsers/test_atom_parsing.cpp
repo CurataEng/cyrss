@@ -20,7 +20,6 @@ struct AuthorParseTestContext {
     pugiDoc.load_string(rawDoc.c_str());
   }
   FeedAuthor run() {
-    auto root = pugiDoc.root();
     auto authorNode = pugiDoc.root().child("author");
     FeedAuthor author;
     parsers::parseAtomAuthor(author, authorNode);

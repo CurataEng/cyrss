@@ -30,6 +30,7 @@ enum class FeedDataType {
   HTML = 2
 };
 
+std::string stringofFeedDataType(FeedDataType dtype);
 FeedDataType feedDataTypeOfString(const std::string&);
 
 struct FeedData {
@@ -37,6 +38,7 @@ struct FeedData {
   std::string data;
   bool empty() const;
   static FeedData fromXmlNode(const pugi::xml_node&);
+  std::string getTypeString();
 };
 
 struct FeedLink {
