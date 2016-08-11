@@ -14,12 +14,12 @@ def root_rel(fpath):
 EXTRA_SRC = (
     'parsers/atom.cpp',
     'parsers/FeedParser.cpp',
-    'parsers/Feed.cpp',
     'parsers/rss.cpp',
     'parsers/pugi_util.cpp',
     'parsers/time_util.cpp',
     'parsers/url_util.cpp',
     'xml/pugixml.cpp',
+    'Feed.cpp',
     'util.cpp',
     'exceptions.cpp'
 )
@@ -47,7 +47,7 @@ def get_extensions():
 
 setup(
     name='cyrss',
-    version='1.0.1',
+    version='1.0.2',
     description="A fast RSS parser",
     license='MIT',
     package_data={
